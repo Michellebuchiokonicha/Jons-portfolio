@@ -16,6 +16,37 @@
   }
 }
 
+/* global.css or styles/globals.css */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+
+.flex {
+  display: flex;
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+
 /* body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(

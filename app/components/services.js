@@ -3,69 +3,65 @@
 import { useState, useEffect } from 'react';
 
 const Services = () => {
-    const [scrolled, setScrolled] = useState(false);
 
-    useEffect(() => {  
-        const handleScroll = () => {
-            if(window.scrollY > window.innerHeight * 0.5) {
-                setScrolled(true);
-            } else {
-                setScrolled(false);
-            }
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+    const services = [
+        {id: 1, title: 'Cloud Security Assessment', description: 'I conduct comprehensive cloud security assessments to cloud infrastructure.', activity1:'Vulnerability scanning', activity2: 'Penetration testing', activity3: 'Configuration audits'},
+        {id: 2, title: 'Cloud Searcher', description: 'I conduct comprehensive cloud security assessments to cloud infrastructure.', activity1:'Vulnerability scanning', activity2: 'Penetration testing', activity3: 'Configuration audits'},
+        {id: 3, title: 'Cloud Securit Assessment', description: 'I conduct comprehensive cloud security assessments to cloud infrastructure.', activity1:'Vulnerability scanning', activity2: 'Penetration testing', activity3: 'Configuration audits'},
+        ];
+    // const [scrolled, setScrolled] = useState(false);
+
+    // useEffect(() => {  
+    //     const handleScroll = () => {
+    //         if(window.scrollY > window.innerHeight * 0.5) {
+    //             setScrolled(true);
+    //         } else {
+    //             setScrolled(false);
+    //         }
+    //     };
+    //     window.addEventListener('scroll', handleScroll);
+    //     return () => {
+    //         window.removeEventListener('scroll', handleScroll);
+    //     };
+    // }, []);
 
     return (
-        <section id="services" className={`flex items-center justify-center min-h-screen transition-all duration-500 ${scrolled ? 'justify-around' : ''}`}>
-            <div className={`flex flex-col space-y-4 transition-all duration-500 ${scrolled ? 'order-1' : 'order-2'} ${scrolled ? 'ml-8' : ''}`}>
-                <h2 className="text-4xl font-bold">Services</h2>
-                <div className="flex flex-col space-y-4">
-                    <div className="bg-gray-100 p-4 rounded-md">
-                        <h3 className="text-xl font-bold">Cloud Security Assessments</h3>
+        <section id="services" className="flex items-center justify-center min-h-screen transition-all duration-500">
+            <div className="flex justify-around gap-x-6 px-16 space-y-4 transition-all duration-500 order-2">
+               <div className='w-[40%]'>
+                 <h2 className="text-6xl mb-5">High-Growth and Trusted Services</h2>
+                 <div>
+                 To add to the list of organizations I have also worked with over 250 business owners to create and
+                  launch and scale their business models for profitability and my teachings have directly
+                   impacted over 20,000 followers across all platforms.
+                 </div>
+               </div>
+               
+                <div  className="flex w-[40%] flex-col space-y-4">
+                {services.map((service, index) => (
+                     <div key={service.id} className="bg-gray-100 p-10 rounded-md">
+                        <h3 className="text-xl font-bold">{service.title}</h3>
                         <p className="text-gray-600">
-                            I conduct comprehensive cloud security assessments to identify vulnerabilities and risks in your cloud infrastructure. This includes:
+                            {service.description}
                         </p>
                         <ul className="list-disc pl-6 text-gray-600">
-                            <li>Vulnerability scanning</li>
-                            <li>Penetration testing</li>
-                            <li>Configuration audits</li>
-                            <li>Compliance reviews</li>
+                            <li>{service.activity1}</li>
+                            <li>{service.activity2}</li>
+                            <li>{service.activity3}</li>
+                            {/* <li>Compliance reviews</li> */}
                         </ul>
+                        <button class="bg-blue-500 mt-6 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                         Let&apos;s talk
+                        </button>
                     </div>
-                    <div className="bg-gray-100 p-4 rounded-md">
-                        <h3 className="text-xl font-bold">Security Architecture Design</h3>
-                        <p className="text-gray-600">
-                            I help you design and implement secure cloud architectures that meet your specific business needs and security requirements. This includes:
-                        </p>
-                        <ul className="list-disc pl-6 text-gray-600">
-                            <li>Security controls selection</li>
-                            <li>Network segmentation</li>
-                            <li>Data encryption and access control</li>
-                            <li>Threat modeling</li>
-                        </ul>
-                    </div>
-                    <div className="bg-gray-100 p-4 rounded-md">
-                        <h3 className="text-xl font-bold">Security Awareness Training</h3>
-                        <p className="text-gray-600">
-                            I provide customized security awareness training to your employees to help them understand and mitigate cyber threats. This includes:
-                        </p>
-                        <ul className="list-disc pl-6 text-gray-600">
-                            <li>Phishing and social engineering awareness</li>
-                            <li>Password security and best practices</li>
-                            <li>Data privacy and compliance</li>
-                            <li>Incident response procedures</li>
-                        </ul>
-                    </div>
-                    {/* Add more service entries here */}
+                      ))}
                 </div>
+    
+               
             </div>
-            <div className={`transition-all duration-500 ${scrolled ? 'order-2' : 'order-1'} ${scrolled ? 'mr-8' : ''}`}>
+            {/* <div className="transition-all duration-500 order-1"> */}
                 {/* Add an image or visual element here if desired */}
-            </div>
+            {/* </div> */}
         </section>
     )
 }
