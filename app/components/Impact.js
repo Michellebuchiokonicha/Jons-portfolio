@@ -5,7 +5,7 @@ import React from "react";
 
 const Impact = () => {
     return (
-        <div className="flex items-center mt-10 py-16 justify-center bg-black text-white justify-around">
+        <div className="flex min-h-screen items-center py-16 justify-center text-white justify-around">
              <div>
                 <h1 className="leading-10 pb-1">Happy Clients</h1>
                 <div className="font-extrabold text-6xl">100%</div>

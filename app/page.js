@@ -10,13 +10,14 @@ import Years from "./components/Years";
 import Calendar from "./components/Calendar";
 import Impact from "./components/Impact";
 
+
 export default function Home() {
   return (
-   <div>
+   <div className="bg-[#050E28] font-montserrat">
     <Navbar />
     <Hero />
-    <Years />
     <About />
+    <Years />
     <Experience />
     <Services />
     <Professionals />

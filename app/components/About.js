@@ -37,14 +37,14 @@ const About = () => {
         //         <img src='jon-profile.jpg' alt='my profile picture' className='rounded-full w-64 h-64 object-cover mx-auto' />
         //     </div>
         // </section>
-        <section className='bg-black text-white min-h-screen flex flex-col items-center justify-center'>
+        <section className=' px-10 mb-5 text-white min-h-screen flex flex-col items-center justify-center'>
             <div className='m-auto items-center justify-center align-center text-center py-10 font-bold text-4xl'>About <span className='font-normal'>Me</span></div>
-            <div className="flex gap-x-16 items-center justify-center text-white justify-around">
-                <div className='font-normal text-8xl'>Jonathan</div>
-                <div className=''>
-                <img src='jon-profile.jpg' alt='my profile picture' className='rounded-full' />
+            <div className="flex gap-x-20 items-center justify-around text-white">
+                <div className='font-normal text-8xl w-[30%]'>Jonathan</div>
+                <div className='w-[30%]'>
+                <img src='J-3.jpeg' alt='my profile picture' className='rounded-full' />
                 </div>
-                <div className='font-normal text-8xl'>Ayodele</div>
+                <div className='font-normal text-8xl w-[30%]'>Ayodele</div>
             </div>
             <div className='px-32 flex items-center gap-x-96 justify-between'>
                 <div className='text-2xl w-[35%]'>Do your best, outsource the restvdfdddssdsdssdfjkfg kgfhjchdsjkdsbdsghdds hsdhjsddsjdshjdhddhj dshjdssdhjsdhj </div>

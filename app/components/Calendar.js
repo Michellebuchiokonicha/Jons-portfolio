@@ -12,7 +12,6 @@ const Calendar = () => {
   };
 
   React.useEffect(() => {
-    // Load the Calendly widget script on client-side
     const script = document.createElement('script');
     script.src = 'https://assets.calendly.com/assets/external/widget.js';
     script.async = true;
@@ -24,7 +23,7 @@ const Calendar = () => {
   }, []);
 
   return (
-    <div className="flex items-center justify-center py-10 min-h-10 bg-gray-100">
+    <div className="flex items-center justify-center min-h-screen ">
       <div
         onClick={openCalendly}
         className="cursor-pointer bg-white p-12 px-19 rounded-xl shadow-lg border border-gray-300 flex items-center space-x-4"

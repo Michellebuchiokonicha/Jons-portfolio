@@ -5,7 +5,7 @@ import React from "react";
 
 const Years = () => {
     return (
-        <div className="flex items-center justify-center bg-black text-white justify-around">
+        <div className="min-h-screen flex items-center justify-center text-white justify-around">
             <div className="">
                 <h1 className="leading-10 py-1">Clients</h1>
                 <div className="font-extrabold text-6xl">256+</div>

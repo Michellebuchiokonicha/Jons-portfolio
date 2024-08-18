@@ -37,20 +37,20 @@ const  Hero = () => {
         //     </div>
         // </section>
 
-        <section className='bg-[#2c2323] text-white min-h-screen flex items-center justify-center'>
-        <div className='bg-[#513F3F] rounded-xl m-auto px-10 gap-10 min-h-[40rem] h-full flex w-4/5 items-center justify-center'>
+        <section className=' min-h-screen text-white min-h-screen flex items-center justify-center font-montserrat'>
+        <div className='bg-[#122455] rounded-xl m-auto pt-0 px-10 gap-10 min-h-[40rem] h-full flex w-4/5 items-center justify-center'>
             <div className='w-1/2'>
              <div className='w-[30rem] leading-6 mb-4'>
              <h2 className='text-4xl pb-6 leading-10'>Cybersecurity Analyst, Cyber Educator & Cloud Architect. </h2>
              <div>Cloud security and safety | Cloud Consultancy| | Cyber Innovation and Education </div>
              </div>
              <div>
-             <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+             <button class="bg-[#746969] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
              Let&apos;s talk
              </button>
             </div>
             </div>
-            <div className='rounded-full bg-red-600'>
+            <div className='rounded-lg '>
             <img src='J-2.png' alt='my profile picture' className='rounded-full' />
 
             </div>

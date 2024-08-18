@@ -2,7 +2,7 @@ import React from "react";
 
 const TestimonialMarquee = ({ testimonials }) => {
   return (
-    <div className="overflow-hidden whitespace-nowrap w-full relative">
+    <div className=" min-h-screen flex flex-col items-center overflow-hidden whitespace-nowrap w-full relative">
       <div className="flex animate-marquee">
         {[...testimonials, ...testimonials].map((testimonial, index) => (
           <div key={index} className="flex-shrink-0 px-4 max-w-xs">

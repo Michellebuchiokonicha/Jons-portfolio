@@ -1,4 +1,4 @@
-import TestimonialMarquee from "../components/TestimonialMarquee"; // Adjust the import path as necessary
+import TestimonialMarquee from "../components/TestimonialMarquee"; 
 
 const Professionals = () => {
   const testimonials = [
@@ -14,12 +14,11 @@ const Professionals = () => {
       name: "Mich Buchi",
       role: "CTO of Company B",
     },
-    // Add more testimonials as needed
   ];
 
   return (
-    <div>
-      <h1 className="text-2xl font-bold mb-6">Testimonials</h1>
+    <div className=" pt-72 min-h-screen flex flex-col items-center">
+      <h1 className="text-4xl font-bold mb-32 text-white">Testimonials</h1>
       <TestimonialMarquee testimonials={testimonials} />
     </div>
   );

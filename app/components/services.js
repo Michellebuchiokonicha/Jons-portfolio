@@ -26,9 +26,9 @@ const Services = () => {
     // }, []);
 
     return (
-        <section id="services" className="flex items-center justify-center min-h-screen transition-all duration-500">
-            <div className="flex justify-around gap-x-6 px-16 space-y-4 transition-all duration-500 order-2">
-               <div className='w-[40%]'>
+        <section id="services" className="my-22 flex items-center justify-center min-h-screen transition-all duration-500">
+            <div className="flex items-center justify-around gap-x-6 px-16 space-y-4 transition-all duration-500 order-2">
+               <div className='w-[40%] text-white'>
                  <h2 className="text-6xl mb-5">High-Growth and Trusted Services</h2>
                  <div>
                  To add to the list of organizations I have also worked with over 250 business owners to create and
@@ -37,7 +37,7 @@ const Services = () => {
                  </div>
                </div>
                
-                <div  className="flex w-[40%] flex-col space-y-4">
+                <div  className="flex w-[40%] flex-col space-y-6">
                 {services.map((service, index) => (
                      <div key={service.id} className="bg-gray-100 p-10 rounded-md">
                         <h3 className="text-xl font-bold">{service.title}</h3>
@@ -50,7 +50,7 @@ const Services = () => {
                             <li>{service.activity3}</li>
                             {/* <li>Compliance reviews</li> */}
                         </ul>
-                        <button class="bg-blue-500 mt-6 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        <button class="bg-[#746969] mt-6 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                          Let&apos;s talk
                         </button>
                     </div>

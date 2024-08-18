@@ -9,7 +9,13 @@ const Experience = () => {
     ];
 
     return (
-        <div className='relative w-4/5 mx-auto mt-10'>
+       <div className='min-h-screen flex flex-col itemss-center justify-center m-auto mx-auto my-72'>
+         <div className='flex flex-col items-center justify-center gap-4 text-white mb-16'>
+                <div className='font-bold text-4xl'>My Experiences</div>
+                <div>My Experiences span across industries</div>
+
+            </div>
+        <div className='mx-auto relative w-4/5 min-h-screen items-center'>
             {experiences.map((experience, index) => (
                 <div key={experience.id}
                 className={`flex items-center w-1/2 ${
@@ -27,6 +33,7 @@ const Experience = () => {
             ))}
             <div className='absolute top-0 bottom-0 left-1/2 w-0.5 bg-blue-500 transform -translate-x-1/2'></div>
         </div>
+       </div>
     )
 }
 

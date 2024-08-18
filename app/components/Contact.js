@@ -21,12 +21,11 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
     console.log('Form submitted:', formData);
   };
 
   return (
-    <div className="max-w-lg mt-12 mx-auto p-4 items-center justify-center flex flex-col">
+    <div className="max-w-lg text-white  min-h-screen mx-auto px-4 items-center justify-center flex flex-col">
       <h1 className="font-bold text-4xl mb-10">Contact <span className='font-normal'>Me</span></h1>
       <form onSubmit={handleSubmit} className="space-y-4">
         {/* <div className="flex flex-col space-y-2">
@@ -122,7 +121,7 @@ const Contact = () => {
 
         <button
           type="submit"
-          className="w-full bg-blue-500 w-[100%] text-white py-2 rounded-xl hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full bg-[#746969] w-[100%] text-white py-2 rounded-xl hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           Send Message
         </button>
