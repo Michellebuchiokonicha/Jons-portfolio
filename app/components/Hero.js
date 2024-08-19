@@ -37,11 +37,11 @@ const  Hero = () => {
         //     </div>
         // </section>
 
-        <section className=' min-h-screen text-white min-h-screen flex items-center justify-center font-montserrat'>
+        <section className='fontFa min-h-screen text-white min-h-screen flex items-center justify-center'>
         <div className='bg-[#122455] rounded-xl m-auto pt-0 px-10 gap-10 min-h-[40rem] h-full flex w-4/5 items-center justify-center'>
             <div className='w-1/2'>
              <div className='w-[30rem] leading-6 mb-4'>
-             <h2 className='text-4xl pb-6 leading-10'>Cybersecurity Analyst, Cyber Educator & Cloud Architect. </h2>
+             <h2 className=' text-4xl pb-6 leading-10'>Cybersecurity Analyst, Cyber Educator & Cloud Architect. </h2>
              <div>Cloud security and safety | Cloud Consultancy| | Cyber Innovation and Education </div>
              </div>
              <div>

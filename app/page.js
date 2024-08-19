@@ -13,7 +13,7 @@ import Impact from "./components/Impact";
 
 export default function Home() {
   return (
-   <div className="bg-[#050E28] font-montserrat">
+   <div className="bg-[#050E28] font-poppins">
     <Navbar />
     <Hero />
     <About />

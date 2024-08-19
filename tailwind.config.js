@@ -14,8 +14,17 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       fontFamily: {
-        Montserrat: ['Montserrat', 'sans-serif'],
-        'montserrat': ['Montserrat'],
+        // montserrat: ['Montserrat', 'sans-serif'],
+        'montserrat': ['Montserrat', 'sans-serif'],
+        "greyQo": ["Grey Qo", 'cursive'],
+        varelaRound: ["Varela Round", 'sans-serif'],
+        "matemasie": ['Matemasie','sans-serif'],
+        // matemasie: ["Matemasie",'sans-serif'],
+        "roboto": ["Roboto", 'sans-serif'],
+        "madimiOne": ["Madimi One", 'sans-serif'],
+       "eduVic":[ "Edu VIC WA NT Beginner", 'cursive'],
+       poppins: ["Poppins", 'sans-serif']
+        
       },
       keyframes: {
         marquee: {

@@ -36,19 +36,20 @@ const About = () => {
         //     <div className="transition-all duration-500 order-1">
         //         <img src='jon-profile.jpg' alt='my profile picture' className='rounded-full w-64 h-64 object-cover mx-auto' />
         //     </div>
-        // </section>
+        // </section>fon
         <section className=' px-10 mb-5 text-white min-h-screen flex flex-col items-center justify-center'>
             <div className='m-auto items-center justify-center align-center text-center py-10 font-bold text-4xl'>About <span className='font-normal'>Me</span></div>
             <div className="flex gap-x-20 items-center justify-around text-white">
-                <div className='font-normal text-8xl w-[30%]'>Jonathan</div>
+                <div className='e font-normal text-8xl w-[30%]'>Jonathan</div>
                 <div className='w-[30%]'>
                 <img src='J-3.jpeg' alt='my profile picture' className='rounded-full' />
                 </div>
                 <div className='font-normal text-8xl w-[30%]'>Ayodele</div>
             </div>
             <div className='px-32 flex items-center gap-x-96 justify-between'>
-                <div className='text-2xl w-[35%]'>Do your best, outsource the restvdfdddssdsdssdfjkfg kgfhjchdsjkdsbdsghdds hsdhjsddsjdshjdhddhj dshjdssdhjsdhj </div>
-                <div className='w-[35%]'>with over 7 years of impact ..
+                <div className='text-2xl w-[35%]'>Do your best,Whereas recognition of the inherent dignity
+                </div>
+                <div className=' w-[35%]'>with over 7 years of impact ..
                     <div>Social media</div>
 
                 </div>
