@@ -23,7 +23,8 @@ module.exports = {
         "roboto": ["Roboto", 'sans-serif'],
         "madimiOne": ["Madimi One", 'sans-serif'],
        "eduVic":[ "Edu VIC WA NT Beginner", 'cursive'],
-       poppins: ["Poppins", 'sans-serif']
+       poppins: ["Poppins", 'sans-serif'],
+       "dmSerifText": [ "DM Serif Text", 'serif']
         
       },
       keyframes: {

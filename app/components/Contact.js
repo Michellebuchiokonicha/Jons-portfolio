@@ -25,9 +25,9 @@ const Contact = () => {
   };
 
   return (
-    <div className="max-w-lg text-white  min-h-screen mx-auto px-4 items-center justify-center flex flex-col">
+    <div id='contact' className="max-w-lg text-white  min-h-screen mx-auto px-4 items-center justify-center flex flex-col">
       <h1 className="font-bold text-4xl mb-10">Contact <span className='font-normal'>Me</span></h1>
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-4 w-full">
         {/* <div className="flex flex-col space-y-2">
           <label htmlFor="firstName" className="font-semibold">First Name</label>
           <input
@@ -53,7 +53,7 @@ const Contact = () => {
             required
           />
         </div> */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="flex flex-col space-y-2">
             <label htmlFor="firstName" className="font-semibold">First Name</label>
             <input
@@ -62,7 +62,7 @@ const Contact = () => {
               name="firstName"
               value={formData.firstName}
               onChange={handleChange}
-              className="p-2 border border-gray-300 rounded-xl w-[100%]"
+              className="p-2 border border-gray-300 rounded-xl w-full"
               required
             />
           </div>
@@ -89,7 +89,7 @@ const Contact = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className="p-2 border border-gray-300 rounded-xl w-[100%]"
+            className="p-2 border border-gray-300 rounded-xl w-full"
             required
           />
         </div>
@@ -102,7 +102,7 @@ const Contact = () => {
             name="company"
             value={formData.company}
             onChange={handleChange}
-            className="p-2 border border-gray-300 rounded-xl w-[100%]"
+            className="p-2 border border-gray-300 rounded-xl w-full"
           />
         </div>
 
@@ -113,7 +113,7 @@ const Contact = () => {
             name="message"
             value={formData.message}
             onChange={handleChange}
-            className="p-2 border border-gray-300 rounded-xl w-[100%]"
+            className="p-2 border border-gray-300 rounded-xl w-full"
             rows="4"
             required
           ></textarea>

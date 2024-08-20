@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -11,12 +13,31 @@ import Calendar from "./components/Calendar";
 import Impact from "./components/Impact";
 
 
+import styled from 'styled-components';
+import { useRef } from "react";
+import { Zen_Dots } from "next/font/google";
+
+
+const DivGrey = styled.div`
+       font-family: "Varela Round", sans-serif; 
+    //  font-family: "Matemasie", sans-serif;
+    // font-family: "Grey Qo", 'cursive';
+      // font-family: 'Montserrat', sans-serif;
+    // background-color: "#050E28";
+    //  font-family: 'Matemasie', sans-serif;
+    //  @apply bg-[#050E28];
+`;
+
+
 export default function Home() {
+
+
+
   return (
-   <div className="bg-[#050E28] font-poppins">
+   <DivGrey className=" bg-[#050E28] ">
     <Navbar />
     <Hero />
-    <About />
+    <About  />
     <Years />
     <Experience />
     <Services />
@@ -24,6 +45,6 @@ export default function Home() {
     <Impact />
     <Contact />
     <Calendar />
-   </div>
+   </DivGrey>
   );
 }

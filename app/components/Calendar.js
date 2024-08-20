@@ -26,7 +26,7 @@ const Calendar = () => {
     <div className="flex items-center justify-center min-h-screen ">
       <div
         onClick={openCalendly}
-        className="cursor-pointer bg-white p-12 px-19 rounded-xl shadow-lg border border-gray-300 flex items-center space-x-4"
+        className="cursor-pointer bg-white p-12 px-12 md:px-19 rounded-xl shadow-lg border border-gray-300 flex items-center space-x-4"
       >
         <div className="text-center">
           <p className="text-xl font-bold">Book a 15-Minute Meeting</p>
