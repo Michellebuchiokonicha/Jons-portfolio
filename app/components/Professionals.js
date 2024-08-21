@@ -3,14 +3,14 @@ import TestimonialMarquee from "../components/TestimonialMarquee";
 const Professionals = () => {
   const testimonials = [
     {
-      image: "/jon-profile.jpg",
-      text: "This is an amazing service!",
+      image: "/J-2.png",
+      text: "When it comes to investment and growth marketing, Jago Emmanuel truly knows his onions! I've known him for more than 6 years now and I can say he is the real deal.  His investment ideas and strategies are pragmatic and current. If you want get rich quick schemes, he is not your guy but if you want to build long lasting generational wealth, listen to him.",
       name: "Mimi Okon",
       role: "CEO of Company A",
     },
     {
-      image: "/jon-profile.jpg",
-      text: "Highly recommended!",
+      image: "/J-2.png",
+      text: "When it comes to investment and growth marketing, Jago Emmanuel truly knows his onions! I've known him for more than 6 years now and I can say he is the real deal.  His investment ideas and strategies are pragmatic and current. If you want get rich quick schemes, he is not your guy but if you want to build long lasting generational wealth, listen to him.",
       name: "Mich Buchi",
       role: "CTO of Company B",
     },

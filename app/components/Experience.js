@@ -3,9 +3,9 @@ import React from 'react';
 
 const Experience = () => {
     const experiences = [
-        {id: 1, title: 'Experience 1', description: 'Detailsfff fjdknen erbrfdjfddf dfbfdbfdn dhsjdsjds dwsjds ekrtkj erkreker ejrre about experience 1'},
-        {id: 2, title: 'Experience 2', description: 'Details about experience 2'},
-        {id: 3, title: 'Experience 3', description: 'Details about experience 3'}
+        {id: 1, role: 'Cyber Educator', logo: '', date: 'feb.2022 - March.2023', location: 'Lagos, Nigeri', description: 'Detailsfff fjdknen erbrfdjfddf dfbfdbfdn dhsjdsjds dwsjds ekrtkj erkreker ejrre about experience 1'},
+        {id: 2, role: 'Cyber Educator', logo: '', date: 'feb.2022 - March.2023', location: 'Lagos, Nigeria', description: 'Details about experience 2'},
+        {id: 3, role: 'Cyber Educator', logo: '', date: 'feb.2022 - March.2023', location: 'Lagos, Nigeria', description: 'Details about experience 3'}
     ];
 
     return (
@@ -23,8 +23,18 @@ const Experience = () => {
                 }`}
                 >
                     <div className='relative w-[90%] lg:w-full h-40 z-10 bg-gray-100 p-4 mx-auto lg:mx-8 my-4 rounded-lg shadow-md'>
-                        <h3 className='text-lg lg:text-xl font-bold'>{experience.title}</h3>
-                        <p className='mt-2 text-sm lg:text-base'>{experience.description}</p>
+                        {/* <h3 className='text-lg lg:text-xl font-bold'>{experience.role}</h3> */}
+                        <div className='flex items-center justify-around'>
+                            <div className='flex'>
+                                <img src='logo.jpg' width={50} height={50} alt='logo' />
+                                <div>
+                                    <div>{experience.role}  </div>
+                                    <div>{experience.location}</div>
+                                </div>
+                            </div>
+                            <div>{experience.date}</div>
+                        </div>
+                        <div className='mt-2 text-sm lg:text-base'>{experience.description}</div>
                     </div>
                     <div className='absolute left-1/2 transform -translate-x-1/2 bg-blue-500 text-white w-8 h-8 rounded-full flex items-center justify-center z-20'>
                        <span>0{experience.id}</span>

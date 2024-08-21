@@ -9,21 +9,6 @@ const Services = () => {
         {id: 2, title: 'Cloud Searcher', description: 'I conduct comprehensive cloud security assessments to cloud infrastructure.', activity1:'Vulnerability scanning', activity2: 'Penetration testing', activity3: 'Configuration audits'},
         {id: 3, title: 'Cloud Securit Assessment', description: 'I conduct comprehensive cloud security assessments to cloud infrastructure.', activity1:'Vulnerability scanning', activity2: 'Penetration testing', activity3: 'Configuration audits'},
         ];
-    // const [scrolled, setScrolled] = useState(false);
-
-    // useEffect(() => {  
-    //     const handleScroll = () => {
-    //         if(window.scrollY > window.innerHeight * 0.5) {
-    //             setScrolled(true);
-    //         } else {
-    //             setScrolled(false);
-    //         }
-    //     };
-    //     window.addEventListener('scroll', handleScroll);
-    //     return () => {
-    //         window.removeEventListener('scroll', handleScroll);
-    //     };
-    // }, []);
 
     return (
         <section id="services" className="my-22 flex flex-col lg:flex-row items-center justify-center min-h-screen px-4 lg:px-16 transition-all duration-500">
@@ -59,9 +44,6 @@ const Services = () => {
     
                
             </div>
-            {/* <div className="transition-all duration-500 order-1"> */}
-                {/* Add an image or visual element here if desired */}
-            {/* </div> */}
         </section>
     )
 }
