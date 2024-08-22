@@ -19,7 +19,7 @@ import { Zen_Dots } from "next/font/google";
 
 
 const DivGrey = styled.div`
-       font-family: "Varela Round", sans-serif; 
+      //  font-family: "Varela Round", sans-serif; 
     //  font-family: "Matemasie", sans-serif;
     // font-family: "Grey Qo", 'cursive';
       // font-family: 'Montserrat', sans-serif;
@@ -34,7 +34,7 @@ export default function Home() {
 
 
   return (
-   <DivGrey className=" bg-[#050E28] overflow-hidden">
+   <DivGrey className=" bg-[#050E28] overflow-hidden font-greyQo">
     <Navbar />
     <Hero />
     <About  />

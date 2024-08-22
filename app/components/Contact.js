@@ -1,6 +1,8 @@
 "use client"
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -24,35 +26,44 @@ const Contact = () => {
     console.log('Form submitted:', formData);
   };
 
-  return (
-    <div id='contact' className="max-w-lg text-white  min-h-screen mx-auto px-4 items-center justify-center flex flex-col">
-      <h1 className="font-bold text-4xl mb-10">Contact <span className='font-normal'>Me</span></h1>
-      <form onSubmit={handleSubmit} className="space-y-4 w-full">
-        {/* <div className="flex flex-col space-y-2">
-          <label htmlFor="firstName" className="font-semibold">First Name</label>
-          <input
-            type="text"
-            id="firstName"
-            name="firstName"
-            value={formData.firstName}
-            onChange={handleChange}
-            className="p-2 border border-gray-300 rounded"
-            required
-          />
-        </div>
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
 
-        <div className="flex flex-col space-y-2">
-          <label htmlFor="lastName" className="font-semibold">Last Name</label>
-          <input
-            type="text"
-            id="lastName"
-            name="lastName"
-            value={formData.lastName}
-            onChange={handleChange}
-            className="p-2 border border-gray-300 rounded"
-            required
-          />
-        </div> */}
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
+
+  const textVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.2 } },
+  };
+
+  const formVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.8, delay: 0.4 } },
+  };
+
+  return (
+    <div id='contact' className="max-w-lg text-white  min-h-screen mx-auto px-4 items-center justify-center flex flex-col" ref={ref}>
+      <motion.h1
+        className="font-bold text-4xl mb-10"
+        variants={textVariants}
+        initial="hidden"
+        animate={controls}
+      >
+        Contact <span className='font-normal'>Me</span>
+      </motion.h1>
+      <motion.form
+        onSubmit={handleSubmit}
+        className="space-y-4 w-full"
+        variants={formVariants}
+        initial="hidden"
+        animate={controls}
+      >
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="flex flex-col space-y-2">
             <label htmlFor="firstName" className="font-semibold">First Name</label>
@@ -62,7 +73,7 @@ const Contact = () => {
               name="firstName"
               value={formData.firstName}
               onChange={handleChange}
-              className="p-2 border border-gray-300 rounded-xl w-full"
+              className="p-2 border border-[#122455] rounded-xl w-full"
               required
             />
           </div>
@@ -75,7 +86,7 @@ const Contact = () => {
               name="lastName"
               value={formData.lastName}
               onChange={handleChange}
-              className="p-2 border border-gray-300 rounded-xl w-[100%]"
+              className="p-2 border border-[#122455] rounded-xl w-[100%]"
               required
             />
           </div>
@@ -89,7 +100,7 @@ const Contact = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className="p-2 border border-gray-300 rounded-xl w-full"
+            className="p-2 border border-[#122455] rounded-xl w-full"
             required
           />
         </div>
@@ -102,7 +113,7 @@ const Contact = () => {
             name="company"
             value={formData.company}
             onChange={handleChange}
-            className="p-2 border border-gray-300 rounded-xl w-full"
+            className="p-2 border border-[#122455] rounded-xl w-full"
           />
         </div>
 
@@ -113,7 +124,7 @@ const Contact = () => {
             name="message"
             value={formData.message}
             onChange={handleChange}
-            className="p-2 border border-gray-300 rounded-xl w-full"
+            className="p-2 border border-[[#122455]] rounded-xl w-full"
             rows="4"
             required
           ></textarea>
@@ -125,7 +136,7 @@ const Contact = () => {
         >
           Send Message
         </button>
-      </form>
+      </motion.form>
     </div>
   );
 };
