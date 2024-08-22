@@ -34,7 +34,7 @@ export default function Home() {
 
 
   return (
-   <DivGrey className=" bg-[#050E28] ">
+   <DivGrey className=" bg-[#050E28] overflow-hidden">
     <Navbar />
     <Hero />
     <About  />

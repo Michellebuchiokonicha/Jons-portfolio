@@ -24,9 +24,11 @@ const Experience = () => {
                 >
                     <div className='relative w-[90%] lg:w-full h-40 z-10 bg-gray-100 p-4 mx-auto lg:mx-8 my-4 rounded-lg shadow-md'>
                         {/* <h3 className='text-lg lg:text-xl font-bold'>{experience.role}</h3> */}
-                        <div className='flex items-center justify-around'>
+                        <div className='flex items-center gap-4 justify-around'>
                             <div className='flex'>
-                                <img src='logo.jpg' width={50} height={50} alt='logo' />
+                                <div >
+                                <img src='logo.jpg' width={50} height={50} alt='logo' className='rounded-full border-2 border-red-500'/>
+                                </div>
                                 <div>
                                     <div>{experience.role}  </div>
                                     <div>{experience.location}</div>
@@ -34,7 +36,10 @@ const Experience = () => {
                             </div>
                             <div>{experience.date}</div>
                         </div>
-                        <div className='mt-2 text-sm lg:text-base'>{experience.description}</div>
+                        <div className='flex items-center gap-16 justify-between'>
+                        <div className='mt-2 text-sm lg:text-base flex-start' >{experience.description}</div>
+                        <div className='flex-end'>d</div>
+                        </div>
                     </div>
                     <div className='absolute left-1/2 transform -translate-x-1/2 bg-blue-500 text-white w-8 h-8 rounded-full flex items-center justify-center z-20'>
                        <span>0{experience.id}</span>

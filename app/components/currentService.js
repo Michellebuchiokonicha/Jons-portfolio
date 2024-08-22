@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 
 const Services = () => {
 
@@ -10,31 +10,10 @@ const Services = () => {
         {id: 3, title: 'Cloud Securit Assessment', description: 'I conduct comprehensive cloud security assessments to cloud infrastructure.', activity1:'Vulnerability scanning', activity2: 'Penetration testing', activity3: 'Configuration audits'},
         ];
 
-    
-    const servicesContainerRef = useRef(null);
-    const fixedContentRef = useRef(null);
-    const [isFixed, setIsFixed] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const servicesContainer = servicesContainerRef.current;
-            const fixedContent = fixedContentRef.current;
-            const scrollTop = window.scrollY;
-            
-            if (scrollTop >= servicesContainer.offsetTop && scrollTop < servicesContainer.offsetTop + servicesContainer.offsetHeight - fixedContent.offsetHeight) {
-                setIsFixed(true);
-            } else {
-                setIsFixed(false);
-            }
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
     return (
         <section id="services" className="my-22 flex flex-col lg:flex-row items-center justify-center min-h-screen px-4 lg:px-16 transition-all duration-500">
-            <div className="flex flex-col lg:flex-row items-center justify-around gap-y-6 lg:gap-x-6 lg:gap-y-0 space-y-8 lg:space-y-0 transition-all duration-500 order-2" ref={servicesContainerRef}>
-               <div className={`lg:w-[40%] w-[90%] text-white mb-[43rem] ${isFixed ? 'fixed bottom-0 top-4 rigt-0 left-2 ml-32 transition-all duration-500': ''}`} ref={fixedContentRef}>
+            <div className="flex flex-col lg:flex-row items-center justify-around gap-y-6 lg:gap-x-6 lg:gap-y-0 space-y-8 lg:space-y-0 transition-all duration-500 order-2">
+               <div className='lg:w-[40%] w-[90%] text-white'>
                  <h2 className="text-3xl justify-center items-center text-center md:text-4xl lg:text-6xl mb-4 lg:mb-5">High-Growth and Trusted Services</h2>
                  <div className='text-sm lg:text-base text-center'>
                  To add to the list of organizations I have also worked with over 250 business owners to create and
@@ -43,9 +22,9 @@ const Services = () => {
                  </div>
                </div>
                
-                <div className={`flex w-[90%] lg:w-[40%] flex-col justify-center align-center space-y-6 transition-all duration-500 ${isFixed ? 'relative left-52 left-4' : ''}`}>
+                <div className="flex w-[90%] lg:w-[40%] flex-col justify-center align-center space-y-6">
                 {services.map((service, index) => (
-                     <div key={service.id} className={`bg-gray-100 p-6 lg:p-10 rounded-md ${isFixed ? 'w-[210%]' : ''}`}>
+                     <div key={service.id} className="bg-gray-100 p-6 lg:p-10 rounded-md">
                         <h3 className="text-lg lg:text-xl font-bold">{service.title}</h3>
                         <p className="text-gray-600 text-sm lg:text-base">
                             {service.description}
