@@ -38,10 +38,10 @@ const TestimonialMarquee = ({ testimonials }) => {
                   width={200}
                   height={200}
                   className=" object-cover rounded-full"
-                />
+                /> 
               </div>
               <div className="flex-1">
-                <p className=" mb-2 text-[#122455] text-lg" >&quot;{testimonial.text}&quot;</p>
+                <p className=" pb-4 text-[#122455] text-lg" >&quot;{testimonial.text}&quot;</p>
                 <p className="font-bold text-lg text-[#122455]">{testimonial.name}</p>
                 <p className="text-[#122455] text-base">{testimonial.role}</p>
               </div>

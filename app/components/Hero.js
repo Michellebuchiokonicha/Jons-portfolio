@@ -41,10 +41,10 @@ const  Hero = () => {
   return (
     <DivGrey id='hero' className=' min-h-screen text-white min-h-screen flex  items-center justify-center'>
       <div className='bg-[#122455] align-center pl-32 rounded-xl m-auto pt-0 px-10 lg:gap-10 min-h-[30rem] h-full flex sm:w-4/5 flex-col lg:flex-row items-center justify-center'>
-        <div className='lg:w-1/2  w-full lg:mb-0 text-center lg:text-left'>
-          <div className='w-full sm:w-[30rem] leading-6 mb-4 mx-auto lg:mx-0'>
+        <div className='lg:w-1/2  w-full lg:mb-0 text-center items-center lg:text-left'>
+          <div className='w-full mt-16 lg:mt-0 md:mt-8 sm:w-[30rem] leading-6 lg:mb-4 mx-auto lg:mx-0'>
             <motion.div
-              className='text-2xl sm:text-4xl pb-6 leading-10'
+              className='text-2xl md:text-4xl lg:pb-6 leading-10'
               variants={textVariants}
               initial="hidden"
               animate={controls}
@@ -73,14 +73,14 @@ const  Hero = () => {
             </button>
           </motion.div>
         </div>
-        <div className='lg:w-1/2 items-center justify-center m-auto flex pb-32  w-full lg:mb-0 text-center lg:text-left'>
+        <div className='lg:w-1/2 items-center justify-center hidden lg:block m-auto flex pb-32  w-full lg:mb-0 text-center lg:text-left'>
           <motion.img
             src='J-2.png'
             alt='my profile picture'
-            className='rounded-full shadow-[[#122455]]'
+            className='rounded-full shadow-[#122455]'
             variants={imageVariants}
-            initial="hidden"
-            animate={controls}
+            // initial="hidden"
+            // animate={controls}
             ref={ref}
           />
         </div>

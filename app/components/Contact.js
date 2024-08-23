@@ -13,6 +13,9 @@ const Contact = () => {
     message: '',
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submissionSuccess, setSubmissionSuccess] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -21,9 +24,39 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+
+    try {
+      // Replace this with your actual form submission logic
+      // You'll need to use a backend service like Netlify Functions, Vercel Functions, or a third-party API
+      // to handle the form data and send it to your Sanity CMS.
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmissionSuccess(true);
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          company: '',
+          message: '',
+        });
+      } else {
+        console.error('Error submitting form:', response.status);
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const controls = useAnimation();
@@ -57,6 +90,13 @@ const Contact = () => {
       >
         Contact <span className='font-normal'>Me</span>
       </motion.h1>
+
+      {submissionSuccess && (
+        <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
+          <strong className="font-bold">Success!</strong> Your message has been sent.
+        </div>
+      )}
+
       <motion.form
         onSubmit={handleSubmit}
         className="space-y-4 w-full"
@@ -73,7 +113,7 @@ const Contact = () => {
               name="firstName"
               value={formData.firstName}
               onChange={handleChange}
-              className="p-2 border border-[#122455] rounded-xl w-full"
+              className="p-2 border border-[#122455] text-[#122455] rounded-xl w-full"
               required
             />
           </div>
@@ -86,34 +126,34 @@ const Contact = () => {
               name="lastName"
               value={formData.lastName}
               onChange={handleChange}
-              className="p-2 border border-[#122455] rounded-xl w-[100%]"
+              className="p-2 border border-[#122455] rounded-xl w-[100%] text-[#122455]"
               required
             />
           </div>
         </div>
 
         <div className="flex flex-col space-y-2">
-          <label htmlFor="email" className="font-semibold">Email</label>
+          <label htmlFor="email" className="font-semibold text-[#122455]">Email</label>
           <input
             type="email"
             id="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className="p-2 border border-[#122455] rounded-xl w-full"
+            className="p-2 border border-[#122455] rounded-xl w-full text-[#122455]"
             required
           />
         </div>
 
         <div className="flex flex-col space-y-2">
-          <label htmlFor="company" className="font-semibold">Company</label>
+          <label htmlFor="company" className="font-semibold  text-[#122455]">Company</label>
           <input
             type="text"
             id="company"
             name="company"
             value={formData.company}
             onChange={handleChange}
-            className="p-2 border border-[#122455] rounded-xl w-full"
+            className="p-2 border border-[#122455] text-[#122455] rounded-xl w-full"
           />
         </div>
 
@@ -124,7 +164,7 @@ const Contact = () => {
             name="message"
             value={formData.message}
             onChange={handleChange}
-            className="p-2 border border-[[#122455]] rounded-xl w-full"
+            className="p-2 border border-[#122455] text-[#122455] rounded-xl w-full"
             rows="4"
             required
           ></textarea>
@@ -132,9 +172,10 @@ const Contact = () => {
 
         <button
           type="submit"
-          className="w-full bg-[#746969] w-[100%] text-white py-2 rounded-xl hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full bg-[#122455] w-[100%] text-white py-2 rounded-xl hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-[#122455]"
+          disabled={isSubmitting}
         >
-          Send Message
+          {isSubmitting ? 'Sending...' : 'Send Message'}
         </button>
       </motion.form>
     </div>

@@ -2,10 +2,11 @@ import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
+  // { id: '``jaca', name: 'JACA', current: true },
   { id: 'services', name: 'Services', current: true },
   { id: 'about', name: 'About', current: false },
   { id: 'experience', name: 'Experience', current: false },
-  { id: 'projects', name: 'Projects', current: false },
+  { id: 'contact', name: 'Contact Me', current: false },
 ]
 
 function classNames(...classes) {
@@ -31,7 +32,7 @@ const Navbar = () => {
               <XMarkIcon aria-hidden="true" className="hidden h-6 w-6 group-data-[open]:block" />
             </DisclosureButton>
           </div>
-          <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <div className="absolute inset-y-0 cursor-pointer right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
               <div className="text-[#122455]">
                 JACA
               </div>

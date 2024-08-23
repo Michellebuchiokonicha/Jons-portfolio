@@ -6,7 +6,7 @@ const Calendar = () => {
   const openCalendly = () => {
     if (window.Calendly) {
       window.Calendly.initPopupWidget({
-        url: 'https://calendly.com/your-username/15min', 
+        url: 'https://calendly.com/michelleokonicha/30min', 
       });
     }
   };
@@ -23,13 +23,13 @@ const Calendar = () => {
   }, []);
 
   return (
-    <div className="flex items-center justify-center min-h-screen ">
+    <div className="flex items-center justify-center mb-24 m-auto mt-0">
       <div
         onClick={openCalendly}
-        className="cursor-pointer bg-white p-12 px-12 md:px-19 rounded-xl shadow-lg border border-[[#122455]] flex items-center space-x-4"
+        className="cursor-pointer bg-white p-12 px-24 md:px-19 rounded-xl shadow-lg border border-[[#122455]] flex items-center space-x-4"
       >
         <div className="text-center">
-          <p className="text-xl font-bold">Book a 15-Minute Meeting</p>
+          <p className="text-xl font-bold">Book a 30-Minute Meeting</p>
           <p className="text-[[#122455]">Click to book a slot</p>
         </div>
         <div className="flex-shrink-0">
@@ -53,4 +53,26 @@ const Calendar = () => {
   );
 };
 
-export default Calendar;
+ export default Calendar;
+
+// import React from "react";
+// import { InlineWidget } from "react-calendly";
+
+// const Calendar = () => {
+//   return (
+//     <div className="">
+//       <InlineWidget style="min-width:30px;height:70px" url="https://calendly.com/michelleokonicha/30min" />
+//     </div>
+//   );
+// };
+// export default Calendar;
+
+
+// <!-- Calendly inline widget begin -->
+// <div class="calendly-inline-widget" data-url="https://calendly.com/michelleokonicha/30min?hide_event_type_details=1&hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+// <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+// <!-- Calendly inline widget end -->
+// <!-- Calendly inline widget begin -->
+// <div class="calendly-inline-widget" data-url="https://calendly.com/michelleokonicha/30min" style="min-width:320px;height:700px;"></div>
+// <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+// <!-- Calendly inline widget end -->

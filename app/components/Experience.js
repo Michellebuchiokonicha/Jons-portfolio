@@ -3,6 +3,7 @@
 import React, {useEffect} from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import Image from 'next/image';
 
 const Experience = () => {
   const controls = useAnimation();
@@ -34,7 +35,7 @@ const Experience = () => {
       date: 'feb.2022 - March.2023',
       location: 'Lagos, Nigeri',
       description:
-        'Detailsfff fjdknen erbrfdjfddf dfbfdbfdn dhsjdsjds dwsjds ekrtkj erkreker ejrre about experience 1',
+        'Detailsfff fjdknen erbrfdjfddf dfbfdbfdn dhsjdsjd dcccdssdddsf hfdhfdhfdj sdbhvjsdbh ghsdhgfbdh dhgvh sdfh sdhgdsfh sadgdsg sgsdghsd sdghds dwsjds ekrtkj erkreker ejrre about experience 1',
     },
     {
       id: 2,
@@ -79,25 +80,25 @@ const Experience = () => {
           <motion.div
             key={experience.id}
             className={`text-[#122455] flex items-center w-1/2 ${
-              index % 2 === 0 ? 'justify-end text-right' : 'justify-start text-left ml-auto'
+              index % 2 === 0 ? 'justify-end text-right mb-8' : 'justify-start text-left ml-auto'
             }`}
             variants={experienceVariants}
             initial="hidden"
             animate={controls}
           >
-            <div className="relative w-[90%] lg:w-full h-40 z-10 bg-gray-100 p-4 mx-auto lg:mx-8 my-4 rounded-lg shadow-md">
-              <div className="flex items-center gap-4 justify-around">
-                <div className="flex">
-                  <div>
-                    <img
-                      src="logo.jpg"
+            <div className="relative w-[90%] lg:w-full h-[100%] z-10 bg-gray-100 p-4 py-8 mx-auto lg:mx-8 my-8 rounded-lg shadow-md">
+              <div className="flex items-center gap-[10%] m-auto mb-2 justify-around">
+                <div className="flex justify-center items-center gap-4">
+                  <div className='flex-start'>
+                    <Image
+                      src="/logo.jpg"
                       width={50}
                       height={50}
                       alt="logo"
                       className="rounded-full border-2 border-red-500"
                     />
                   </div>
-                  <div>
+                  <div className='flex-end'>
                     <div>{experience.role}</div>
                     <div>{experience.location}</div>
                   </div>
@@ -105,18 +106,17 @@ const Experience = () => {
                 <div>{experience.date}</div>
               </div>
               <div className="flex items-center gap-16 justify-between">
-                <div className="mt-2 text-sm [#122455] lg:text-base flex-start">
+                <div className="mt-2 flex text-sm lg:text-base flex-center text-start">
                   {experience.description}
                 </div>
-                <div className="flex-end">d</div>
               </div>
             </div>
-            <div className="absolute left-1/2 transform -translate-x-1/2 bg-blue-500 text-white [#122455] w-8 h-8 rounded-full flex items-center justify-center z-20">
+            <div className="absolute left-1/2 transform -translate-x-1/2 bg-[#122455] text-white  w-8 h-8 rounded-full flex items-center justify-center z-20">
               <span>0{experience.id}</span>
             </div>
           </motion.div>
         ))}
-        <div className="absolute top-0 bottom-0 left-1/2 w-0.5 bg-blue-500 transform -translate-x-1/2"></div>
+        <div className="absolute top-0 bottom-0 left-1/2 w-0.5 bg-[#122455] transform -translate-x-1/2"></div>
       </motion.div>
     </div>
   );
