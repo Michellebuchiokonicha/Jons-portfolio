@@ -98,8 +98,8 @@ const Experience = () => {
                     />
                   </div>
                   <div className='flex-end'>
-                    <div className='flex-center text-start'>{experience.role}</div>
-                    <div className='flex-center text-start'>{experience.location}</div>
+                    <div className='flex-center text-start font-bold'>{experience.role}</div>
+                    <div className='flex-center text-start text-sm'>{experience.location}</div>
                   </div>
                 </div>
                 <div className='md:flex hidden md:flex-start'>{experience.date}</div>
