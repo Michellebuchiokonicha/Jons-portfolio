@@ -69,7 +69,7 @@ const Services = () => {
                
                 <div className={`flex w-[90%] lg:w-[40%] flex-col justify-center align-center space-y-6  ${isFixed ? 'lg:relative lg:left-44 ' : ''}`}>
                 {services.map((service, index) => (
-                     <div key={service._id} className={`bg-gray-100 p-6 lg:p-10 rounded-md ${isFixed ? 'lg:w-[240%]' : ''}`}>
+                     <div key={service._id} className={`bg-gray-100 p-6 lg:p-10 rounded-md ${isFixed ? 'lg:w-[220%]' : ''}`}>
                         <h3 className="text-lg lg:text-xl font-bold text-[#122455]">{service.title}</h3>
                         <p className="text-[#122455] text-sm lg:text-base">
                             {service.description}
