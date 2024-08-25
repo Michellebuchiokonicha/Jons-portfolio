@@ -170,7 +170,7 @@ const About = () => {
           ref={ref}
         >
           <motion.div className='font-bold text-2xl italic text-gray-300'>Do your best,</motion.div>
-          <motion.div className='font-normal text-sm italic text-gray-300'>Whereas recognition of the inherent dignity</motion.div>
+          <motion.div className='font-normal text-base italic text-gray-300'>Whereas recognition of the inherent dignity</motion.div>
         </motion.div>
 
         <motion.div
