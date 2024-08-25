@@ -28,9 +28,9 @@ const Years = () => {
 
   return (
     <div
-      className="min-h-screen flex flex-col md:flex-row items-center text-center justify-center text-white justify-around"
+      className="min-h-screen flex flex-col md:flex-row items-center text-center justify-center text-white justify-around py-16"
       style={{
-        background: `linear-gradient(rgba(5, 14, 40, 0.8), rgba(5, 14, 40, 0.8)), url('/J-2.png') center/contain no-repeat`,
+        background: `linear-gradient(rgba(5, 14, 40, 0.8), rgba(5, 14, 40, 0.8)), url('/J-2.png') center/cover no-repeat`,
       }}
     >
       <motion.div

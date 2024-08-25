@@ -18,7 +18,7 @@ const About = () => {
 
   const nameVariants = {
     hidden: { opacity: 0, x: -50 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.8, delay: 0.4 } },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.8, delay: 0.2 } },
   };
 
   const controls = useAnimation();
@@ -72,7 +72,7 @@ const About = () => {
           ref={ref}
         >
           {text}
-          <Cursor cursorColor='red' />
+          <Cursor cursorColor='#8B0000' />
         </motion.div>
         <div className='w-1/3 flex items-center justify-center'>
           <motion.img
@@ -93,7 +93,7 @@ const About = () => {
           ref={ref}
         >
           {text2}
-          <Cursor cursorColor='red' />
+          <Cursor cursorColor='#8B0000' />
         </motion.div>
       </div>
       <div className='px-4 md:px-32 flex flex-col md:flex-row items-center gap-y-10 md:gap-y-0 gap-x-0 md:gap-x-96 justify-between mt-10 w-full'>

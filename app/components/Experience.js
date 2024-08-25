@@ -86,7 +86,7 @@ const Experience = () => {
             animate={controls}
           >
             <div className="relative w-[90%] lg:w-full h-[100%] z-10 bg-gray-100 p-4 py-8 mx-auto lg:mx-8 my-8 rounded-lg shadow-md">
-              <div className="flex items-center gap-[10%] m-auto mb-2 justify-around">
+              <div className="flex items-center  m-auto mb-2 justify-between">
                 <div className="flex justify-center items-center gap-4">
                   <div className='flex-start'>
                     <Image
@@ -98,8 +98,8 @@ const Experience = () => {
                     />
                   </div>
                   <div className='flex-end'>
-                    <div>{experience.role}</div>
-                    <div>{experience.location}</div>
+                    <div className='flex-center text-start'>{experience.role}</div>
+                    <div className='flex-center text-start'>{experience.location}</div>
                   </div>
                 </div>
                 <div>{experience.date}</div>
