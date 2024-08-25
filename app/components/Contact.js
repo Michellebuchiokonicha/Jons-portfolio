@@ -78,7 +78,7 @@ const Contact = () => {
   };
 
   return (
-    <div id='contact' className="snap-start max-w-lg text-white  min-h-screen mx-auto px-4 items-center justify-center flex flex-col" ref={ref}>
+    <div id='contact' className="snap-start max-w-lg text-gray-300  min-h-screen mx-auto px-4 items-center justify-center flex flex-col" ref={ref}>
       <motion.h1
         className="font-bold text-4xl mb-10"
         variants={textVariants}
@@ -169,7 +169,7 @@ const Contact = () => {
 
         <button
           type="submit"
-          className="w-full bg-[#122455] w-[100%] text-white py-2 rounded-xl hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-[#122455]"
+          className="w-full bg-[#122455] w-[100%] text-gray-300 py-2 rounded-xl hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-[#122455]"
           disabled={isSubmitting}
         >
           {isSubmitting ? 'Sending...' : 'Send Message'}

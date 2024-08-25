@@ -29,8 +29,8 @@ const Navbar = () => {
   };
 
   return (
-    <Disclosure as="nav" className="bg-white md:mb-2 mb-4">
-      <div className="bg-white mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <Disclosure as="nav" className="bg-gray-300 md:mb-2 mb-4">
+      <div className="bg-gray-300 mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-center">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-[#122455] hover:bg-[#122455] hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -57,7 +57,7 @@ const Navbar = () => {
                     }}
                     aria-current={activeNav === item.id ? 'page' : undefined}
                     className={classNames(
-                      activeNav === item.id ? 'bg-[#122455] text-white' : 'text-[#122455] hover:bg-[#122455] hover:text-white',
+                      activeNav === item.id ? 'bg-[#122455] text-gray-300' : 'text-[#122455] hover:bg-[#122455] hover:text-white',
                       'rounded-md px-3 py-2 text-sm font-medium',
                     )}
                   >

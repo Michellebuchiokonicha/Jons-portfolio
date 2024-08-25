@@ -61,7 +61,7 @@ const Experience = () => {
       ref={ref}
     >
       <motion.div
-        className="flex flex-col items-center justify-center gap-4 text-white mb-16"
+        className="flex flex-col items-center justify-center gap-4 text-gray-300 mb-16"
         variants={textVariants}
         initial="hidden"
         animate={controls}
@@ -110,7 +110,7 @@ const Experience = () => {
                 </div>
               </div>
             </div>
-            <div className="absolute left-1/2 transform -translate-x-1/2 bg-[#122455] text-white  w-8 h-8 rounded-full flex items-center justify-center z-20">
+            <div className="absolute left-1/2 transform -translate-x-1/2 bg-[#122455] text-gray-300  w-8 h-8 rounded-full flex items-center justify-center z-20">
               <span>0{index + 1}{experience._key}</span>
             </div>
           </motion.div>
