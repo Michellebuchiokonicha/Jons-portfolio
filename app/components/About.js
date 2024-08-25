@@ -75,6 +75,12 @@ const About = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
 
+  const Paragraph = ({ children }) => {
+    return (
+      <p className="about-paragraph mb-4">{children}</p>
+    );
+  };
+
   useEffect(() => {
     if (inView) {
       controls.start("visible");
@@ -174,11 +180,11 @@ const About = () => {
           animate={controls}
           ref={ref}
         >
-          <motion.span className='font-normal text-sm text-gray-300'>
+          <motion.span className='font-normal text-base text-gray-300 mb-4 pb-4'>
           {isLoading ? (
           <p>Loading...</p>
         ) : (
-          <PortableText value={aboutMe?.content} components={customComponents} />
+          <PortableText value={aboutMe?.content} components={{ ...customComponents, p: Paragraph }} className='mb-4' />
         )}
           </motion.span>
 

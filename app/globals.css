@@ -57,6 +57,12 @@
 .flex {
   display: flex;
 }
+.About p {
+  margin-bottom: 2rem;
+}
+.about-paragraph {
+  margin-bottom: 2rem;
+}
 
 .animate-marquee {
   /* animation: marquee 30s linear infinite; */
