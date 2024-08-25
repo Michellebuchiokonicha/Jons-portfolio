@@ -114,7 +114,7 @@ const About = () => {
 
   return (
     
-    <section id='about' className='snap-start m-auto px-8 mb-5 text-white min-h-screen flex flex-col items-center justify-center'>
+    <section id='about' className=' m-auto px-8 mb-5 text-white min-h-screen flex flex-col items-center justify-center'>
       <motion.div
         className='m-auto items-center justify-center align-center font-bold text-3xl md:text-4xl'
         variants={textVariants}
@@ -190,26 +190,26 @@ const About = () => {
 
           <motion.div className='font-normal mt-16'>
             <div className='flex justify-center lg:justify-start space-x-6'>
-              <a href="https://www.linkedin.com" className="relative group">
+              <a href="https://uk.linkedin.com/in/jonatayo" className="relative group" target="_blank" rel="noopener noreferrer">
                 <FaLinkedin className="text-2xl text-gray-200 hover:text-white transition-colors" />
                 <span className="absolute left-1/2 transform -translate-x-1/2 bottom-0 translate-y-full opacity-0 group-hover:opacity-100 text-sm text-white bg-gray-800 rounded px-2 py-1 transition-opacity">LinkedIn</span>
               </a>
-              <a href="https://github.com" className="relative group">
+              {/* <a href="https://github.com" className="relative group">
                 <FaGithub className="text-2xl text-gray-200 hover:text-white transition-colors" />
                 <span className="absolute left-1/2 transform -translate-x-1/2 bottom-0 translate-y-full opacity-0 group-hover:opacity-100 text-sm text-white bg-gray-800 rounded px-2 py-1 transition-opacity">GitHub</span>
-              </a>
-              <a href="https://twitter.com" className="relative group">
+              </a> */}
+              <a href="https://x.com/jonat_ayo" className="relative group" target="_blank" rel="noopener noreferrer">
                 <FaTwitter className="text-2xl text-gray-200 hover:text-white transition-colors" />
                 <span className="absolute left-1/2 transform -translate-x-1/2 bottom-0 translate-y-full opacity-0 group-hover:opacity-100 text-sm text-white bg-gray-800 rounded px-2 py-1 transition-opacity">Twitter</span>
               </a>
-              <a href="https://www.instagram.com" className="relative group">
+              <a href="https://www.instagram.com/jonat.ayo" className="relative group" target="_blank" rel="noopener noreferrer">
                 <FaInstagram className="text-2xl text-gray-200 hover:text-white transition-colors" />
                 <span className="absolute left-1/2 transform -translate-x-1/2 bottom-0 translate-y-full opacity-0 group-hover:opacity-100 text-sm text-white bg-gray-800 rounded px-2 py-1 transition-opacity">Instagram</span>
               </a>
-              {/* <a href="https://www.facebook.com" className="relative group">
+              <a href="https://www.facebook.com/jonat.ayo" className="relative group" target="_blank" rel="noopener noreferrer">
                 <FaFacebook className="text-2xl text-gray-200 hover:text-white transition-colors" />
                 <span className="absolute left-1/2 transform -translate-x-1/2 bottom-0 translate-y-full opacity-0 group-hover:opacity-100 text-sm text-white bg-gray-800 rounded px-2 py-1 transition-opacity">Facebook</span>
-              </a> */}
+              </a>
             </div>
           </motion.div>
         </motion.div>

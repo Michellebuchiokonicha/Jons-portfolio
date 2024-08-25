@@ -57,7 +57,7 @@ const Experience = () => {
   return (
     <div
       id="experience"
-      className="snap-start min-h-screen flex flex-col items-center justify-center m-auto mx-auto my-36 lg:my-72"
+      className=" min-h-screen flex flex-col items-center justify-center m-auto mx-auto my-36 lg:my-72"
       ref={ref}
     >
       <motion.div

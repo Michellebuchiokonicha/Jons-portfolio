@@ -27,7 +27,7 @@ const Impact = () => {
   };
 
   return (
-    <div className="snap-start min-h-screen flex flex-col md:flex-row items-center text-center justify-center text-white justify-around transition-all duration-500">
+    <div className="min-h-screen flex flex-col md:flex-row items-center text-center justify-center text-white justify-around transition-all duration-500">
       <motion.div
         className=""
         variants={textVariants}
