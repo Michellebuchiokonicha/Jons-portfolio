@@ -13,7 +13,7 @@ function Calendar() {
   };
 
   return (
-    <div className=" flex justify-center items-center mb-16">
+    <div className=" flex justify-center items-center my-16">
        <div className="relative">
       {/* Button to open the Calendly popup */}
       {/* <button onClick={handleOpenModal}>Schedule a Meeting</button> */}
