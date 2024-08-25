@@ -130,7 +130,7 @@ const Contact = () => {
         </div>
 
         <div className="flex flex-col space-y-2">
-          <label htmlFor="email" className="font-semibold text-[#122455]">Email</label>
+          <label htmlFor="email" className="font-semibold">Email</label>
           <input
             type="email"
             id="email"
@@ -143,7 +143,7 @@ const Contact = () => {
         </div>
 
         <div className="flex flex-col space-y-2">
-          <label htmlFor="company" className="font-semibold  text-[#122455]">Company</label>
+          <label htmlFor="company" className="font-semibold ">Company</label>
           <input
             type="text"
             id="company"

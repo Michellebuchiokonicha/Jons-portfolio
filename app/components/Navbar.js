@@ -1,12 +1,12 @@
+import { useState } from 'react'
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
-const navigation = [
-  // { id: '``jaca', name: 'JACA', current: true },
-  { id: 'services', name: 'Services', current: true },
-  { id: 'about', name: 'About', current: false },
-  { id: 'experience', name: 'Experience', current: false },
-  { id: 'contact', name: 'Contact Me', current: false },
+const navigationItems = [
+  { id: 'services', name: 'Services' },
+  { id: 'about', name: 'About' },
+  { id: 'experience', name: 'Experience' },
+  { id: 'contact', name: 'Contact Me' },
 ]
 
 function classNames(...classes) {
@@ -14,11 +14,18 @@ function classNames(...classes) {
 }
 
 const Navbar = () => {
+  const [activeNav, setActiveNav] = useState('services'); // 'services' is initially active
+
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const handleNavClick = (id) => {
+    setActiveNav(id);
+    scrollToSection(id);
   };
 
   return (
@@ -40,17 +47,17 @@ const Navbar = () => {
           <div className="flex text-center items-center justify-center sm:items-stretch sm:justify-start">
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
-                {navigation.map((item) => (
+                {navigationItems.map((item) => (
                   <a
                     key={item.id}
                     href={`#${item.id}`}
                     onClick={(e) => {
-                      e.preventDefault();  // Prevent default anchor behavior
-                      scrollToSection(item.id);
+                      e.preventDefault();
+                      handleNavClick(item.id);
                     }}
-                    aria-current={item.current ? 'page' : undefined}
+                    aria-current={activeNav === item.id ? 'page' : undefined}
                     className={classNames(
-                      item.current ? 'bg-[#122455] text-white' : 'text-[#122455] hover:bg-[#122455] hover:text-white',
+                      activeNav === item.id ? 'bg-[#122455] text-white' : 'text-[#122455] hover:bg-[#122455] hover:text-white',
                       'rounded-md px-3 py-2 text-sm font-medium',
                     )}
                   >
@@ -65,18 +72,18 @@ const Navbar = () => {
 
       <DisclosurePanel className="sm:hidden">
         <div className="space-y-1 px-2 pb-3 pt-2">
-          {navigation.map((item) => (
+          {navigationItems.map((item) => (
             <DisclosureButton
               key={item.id}
               as="a"
               href={`#${item.id}`}
               onClick={(e) => {
                 e.preventDefault();
-                scrollToSection(item.id);
+                handleNavClick(item.id);
               }}
-              aria-current={item.current ? 'page' : undefined}
+              aria-current={activeNav === item.id ? 'page' : undefined}
               className={classNames(
-                item.current ? 'bg-[#122455] text-white' : 'text-[#122455] hover:bg-[#122455] hover:text-white',
+                activeNav === item.id ? 'bg-[#122455] text-white' : 'text-[#122455] hover:bg-[#122455] hover:text-white',
                 'block rounded-md px-3 py-2 text-base font-medium',
               )}
             >

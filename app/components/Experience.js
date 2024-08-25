@@ -81,12 +81,12 @@ const Experience = () => {
             className={`text-[#122455] flex items-center w-1/2 ${
               index % 2 === 0 ? 'justify-end text-right mb-8' : 'justify-start text-left ml-auto'
             }`}
-            variants={experienceVariants}
+            // variants={experienceVariants}
             initial="hidden"
             animate={controls}
           >
             <div className="relative w-[90%] lg:w-full h-[100%] z-10 bg-gray-100 p-4 py-8 mx-auto lg:mx-8 my-8 rounded-lg shadow-md">
-              <div className="flex items-center  m-auto mb-2 justify-between">
+              <div className="flex flex-wrap gap-y-8 items-center  m-auto mb-2 justify-between">
                 <div className="flex justify-center items-center gap-4">
                   <div className='flex-start'>
                     <Image
@@ -102,7 +102,7 @@ const Experience = () => {
                     <div className='flex-center text-start'>{experience.location}</div>
                   </div>
                 </div>
-                <div>{experience.date}</div>
+                <div className='flex flex-start'>{experience.date}</div>
               </div>
               <div className="flex items-center gap-16 justify-between">
                 <div className="mt-2 flex text-sm lg:text-base flex-center text-start">

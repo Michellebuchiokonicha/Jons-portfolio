@@ -7,17 +7,17 @@ import { useInView } from 'react-intersection-observer';
 
 const About = () => {
   const textVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.2, staggerChildren: 0.1 } },
+    hidden: { opacity: 0.3, y: 50 },
+    visible: { opacity: 1, y: 0.5, transition: { duration: 0.8, delay: 0.2, staggerChildren: 0.1 } },
   };
 
   const imageVariants = {
-    hidden: { opacity: 0, scale: 0.5 },
+    hidden: { opacity: 0.3, scale: 0.5 },
     visible: { opacity: 1, scale: 1, transition: { duration: 0.8, delay: 0.4 } },
   };
 
   const nameVariants = {
-    hidden: { opacity: 0, x: -50 },
+    hidden: { opacity: 0.3, x: -50 },
     visible: { opacity: 1, x: 0, transition: { duration: 0.8, delay: 0.2 } },
   };
 
@@ -50,7 +50,7 @@ const About = () => {
 
 
   return (
-    <section id='about' className='m-auto px-10 mb-5 text-white min-h-screen flex flex-col items-center justify-center'>
+    <section id='about' className='m-auto px-8 mb-5 text-white min-h-screen flex flex-col items-center justify-center'>
       <motion.div
         className='m-auto items-center justify-center align-center font-bold text-3xl md:text-4xl'
         variants={textVariants}
@@ -63,9 +63,9 @@ const About = () => {
             {/* </motion.span> */}
         <motion.span className='font-normal'> About Me</motion.span>
       </motion.div>
-      <div className="m-auto flex flex-col lg:flex-row gap-y-10  lg:gap-x-1 items-center justify-center text-white w-full">
+      <div className="m-auto flex flex-col lg:flex-row gap-y-10 text-center lg:gap-x-1 items-center justify-center text-white w-full">
         <motion.div
-          className=' font-normal text-4xl md:text-7xl lg:text-8xl w-full lg:w-1/3 pl-10'
+          className=' font-normal text-4xl md:text-7xl lg:text-8xl w-full lg:w-1/3 lg:pl-16'
           variants={nameVariants}
           initial="hidden"
           animate={controls}
@@ -96,9 +96,9 @@ const About = () => {
           <Cursor cursorColor='#8B0000' />
         </motion.div>
       </div>
-      <div className='px-4 md:px-32 flex flex-col md:flex-row items-center gap-y-10 md:gap-y-0 gap-x-0 md:gap-x-96 justify-between mt-10 w-full'>
+      <div className='px-0 md:px-32 flex flex-col md:flex-row items-center gap-y-10 md:gap-y-0 gap-x-0 md:gap-x-96 justify-between mt-10 w-full'>
         <motion.div
-          className='text-lg md:text-2xl w-[70%] md:w-[35%] text-center md:text-left'
+          className='text-lg md:text-2xl w-full md:w-[35%] text-center md:text-left'
           variants={textVariants}
           initial="hidden"
           animate={controls}
@@ -108,7 +108,7 @@ const About = () => {
           <motion.span className='font-normal'>Whereas recognition of the inherent dignity</motion.span>
         </motion.div>
         <motion.div
-          className='w-[70%] md:w-[35%] text-lg md:text-2xl text-center md:text-left'
+          className='w-full md:w-[35%] text-lg md:text-2xl text-center md:text-left'
           variants={textVariants}
           initial="hidden"
           animate={controls}
