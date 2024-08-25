@@ -1,7 +1,10 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+
+
 
 const TestimonialMarquee = ({ testimonials }) => {
+
   return (
     <div className="min-h-screen flex flex-col items-center w-full overflow-hidden relative transition-all duration-500">
       <div className="flex animate-marquee space-x-8">

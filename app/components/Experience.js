@@ -1,13 +1,32 @@
 "use client"
 
-import React, {useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
+import { client } from '@/sanity/lib/client';
+
+async function getData() {
+  const query = `*[_type == "experience"] {
+  _key,
+  _id,
+  description,
+    "logo": logo.asset->url,
+      location,
+    date,
+    role,
+}
+`
+const data = await client.fetch(query);
+return data;
+}
+
+export const revalidate = 60;
 
 const Experience = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
+  const [experiences, setExperiences] = useState([]);
 
   useEffect(() => {
     if (inView) {
@@ -16,6 +35,14 @@ const Experience = () => {
       controls.start("hidden");
     }
   }, [controls, inView]);
+
+  useEffect(() => {
+    const fetchExperiences = async () => {
+      const data = await getData();
+      setExperiences(data);
+    };
+    fetchExperiences();
+  }, []);
 
   const textVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -26,35 +53,7 @@ const Experience = () => {
     hidden: { opacity: 0, x: -50 },
     visible: { opacity: 1, x: 0, transition: { duration: 0.8, delay: 0.4, staggerChildren: 0.1 } },
   };
-
-  const experiences = [
-    {
-      id: 1,
-      role: 'Cyber Educator',
-      logo: '',
-      date: 'feb.2022 - March.2023',
-      location: 'Lagos, Nigeri',
-      description:
-        'Detailsfff fjdknen erbrfdjfddf dfbfdbfdn dhsjdsjd dcccdssdddsf hfdhfdhfdj sdbhvjsdbh ghsdhgfbdh dhgvh sdfh sdhgdsfh sadgdsg sgsdghsd sdghds dwsjds ekrtkj erkreker ejrre about experience 1',
-    },
-    {
-      id: 2,
-      role: 'Cyber Educator',
-      logo: '',
-      date: 'feb.2022 - March.2023',
-      location: 'Lagos, Nigeria',
-      description: 'Details about experience 2',
-    },
-    {
-      id: 3,
-      role: 'Cyber Educator',
-      logo: '',
-      date: 'feb.2022 - March.2023',
-      location: 'Lagos, Nigeria',
-      description: 'Details about experience 3',
-    },
-  ];
-
+  
   return (
     <div
       id="experience"
@@ -78,7 +77,7 @@ const Experience = () => {
       >
         {experiences.map((experience, index) => (
           <motion.div
-            key={experience.id}
+            key={experience._id}
             className={`text-[#122455] flex items-center w-1/2 ${
               index % 2 === 0 ? 'justify-end text-right mb-8' : 'justify-start text-left ml-auto'
             }`}
@@ -112,7 +111,7 @@ const Experience = () => {
               </div>
             </div>
             <div className="absolute left-1/2 transform -translate-x-1/2 bg-[#122455] text-white  w-8 h-8 rounded-full flex items-center justify-center z-20">
-              <span>0{experience.id}</span>
+              <span>0{index + 1}{experience._key}</span>
             </div>
           </motion.div>
         ))}

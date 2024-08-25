@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+ import { useTypewriter, Cursor } from 'react-simple-typewriter';
 
 const About = () => {
   const textVariants = {
@@ -12,7 +13,7 @@ const About = () => {
 
   const imageVariants = {
     hidden: { opacity: 0, scale: 0.5 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.8, delay: 0.6 } },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.8, delay: 0.4 } },
   };
 
   const nameVariants = {
@@ -30,6 +31,23 @@ const About = () => {
       controls.start("hidden");
     }
   }, [controls, inView]);
+
+  const [text] = useTypewriter({
+    words: ['Jonathan' ,],
+    loop: 0,
+    typeSpeed: 100,
+    deleteSpeed: 100,
+    onLoopDone: () => console.log(`loop completed after infinite runs.`)
+  })
+  const [text2] = useTypewriter({
+    words: ['Ayodeji' ,],
+    loop: 0,
+    typeSpeed: 150,
+    //  delay: 200,
+    deleteSpeed: 150,
+    onLoopDone: () => console.log(`loop completed after infinite runs.`)
+  })
+
 
   return (
     <section id='about' className='m-auto px-10 mb-5 text-white min-h-screen flex flex-col items-center justify-center'>
@@ -53,7 +71,8 @@ const About = () => {
           animate={controls}
           ref={ref}
         >
-          Jonathan
+          {text}
+          <Cursor cursorColor='red' />
         </motion.div>
         <div className='w-1/3 flex items-center justify-center'>
           <motion.img
@@ -73,7 +92,8 @@ const About = () => {
           animate={controls}
           ref={ref}
         >
-          Ayodelejiii
+          {text2}
+          <Cursor cursorColor='red' />
         </motion.div>
       </div>
       <div className='px-4 md:px-32 flex flex-col md:flex-row items-center gap-y-10 md:gap-y-0 gap-x-0 md:gap-x-96 justify-between mt-10 w-full'>

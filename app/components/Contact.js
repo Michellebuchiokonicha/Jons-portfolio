@@ -29,9 +29,6 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Replace this with your actual form submission logic
-      // You'll need to use a backend service like Netlify Functions, Vercel Functions, or a third-party API
-      // to handle the form data and send it to your Sanity CMS.
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {

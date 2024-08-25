@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import React, {useEffect} from "react";
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Years = () => {
   const controls = useAnimation();
@@ -27,7 +27,12 @@ const Years = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col md:flex-row items-center text-center justify-center text-white justify-around">
+    <div
+      className="min-h-screen flex flex-col md:flex-row items-center text-center justify-center text-white justify-around"
+      style={{
+        background: `linear-gradient(rgba(5, 14, 40, 0.8), rgba(5, 14, 40, 0.8)), url('/J-2.png') center/contain no-repeat`,
+      }}
+    >
       <motion.div
         className=""
         variants={textVariants}
