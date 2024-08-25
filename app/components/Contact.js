@@ -78,7 +78,7 @@ const Contact = () => {
   };
 
   return (
-    <div id='contact' className="max-w-lg text-white  min-h-screen mx-auto px-4 items-center justify-center flex flex-col" ref={ref}>
+    <div id='contact' className="snap-start max-w-lg text-white  min-h-screen mx-auto px-4 items-center justify-center flex flex-col" ref={ref}>
       <motion.h1
         className="font-bold text-4xl mb-10"
         variants={textVariants}

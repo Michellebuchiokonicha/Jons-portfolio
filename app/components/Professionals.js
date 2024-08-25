@@ -47,7 +47,7 @@ const Professionals = () => {
   
 
   return (
-    <div className=" pt-72 min-h-screen flex flex-col items-center">
+    <div className="snap-start pt-72 min-h-screen flex flex-col items-center">
       <h1 className="text-4xl font-bold mb-32 text-white">Testimonials</h1>
       <TestimonialMarquee testimonials={testimonials} />
     </div>

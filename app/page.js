@@ -34,7 +34,7 @@ export default function Home() {
 
 
   return (
-   <DivGrey className=" bg-[#050E28] overflow-hidden font-montserrat">
+   <DivGrey className=" bg-[#050E28] overflow-hidden font-montserrat snap-y snap-mandatory">
     <Navbar />
     <Hero />
     <About  />

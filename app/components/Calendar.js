@@ -19,7 +19,7 @@ function Calendar() {
       {/* <button onClick={handleOpenModal}>Schedule a Meeting</button> */}
 
       <button
-          className="cursor-pointer bg-white p-12 px-8 md:px-16 lg:px-24 md:px-19 rounded-xl shadow-lg border border-[#122455] flex items-center space-x-4"
+          className="snap-start cursor-pointer bg-white p-12 px-8 md:px-16 lg:px-24 md:px-19 rounded-xl shadow-lg border border-[#122455] flex items-center space-x-4"
           onClick={handleOpenModal}
         >
           <div className="text-center">

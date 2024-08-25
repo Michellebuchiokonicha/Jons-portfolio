@@ -50,7 +50,7 @@ const About = () => {
 
 
   return (
-    <section id='about' className='m-auto px-8 mb-5 text-white min-h-screen flex flex-col items-center justify-center'>
+    <section id='about' className='snap-start m-auto px-8 mb-5 text-white min-h-screen flex flex-col items-center justify-center'>
       <motion.div
         className='m-auto items-center justify-center align-center font-bold text-3xl md:text-4xl'
         variants={textVariants}

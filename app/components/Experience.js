@@ -57,7 +57,7 @@ const Experience = () => {
   return (
     <div
       id="experience"
-      className="min-h-screen flex flex-col items-center justify-center m-auto mx-auto my-36 lg:my-72"
+      className="snap-start min-h-screen flex flex-col items-center justify-center m-auto mx-auto my-36 lg:my-72"
       ref={ref}
     >
       <motion.div
@@ -102,7 +102,7 @@ const Experience = () => {
                     <div className='flex-center text-start text-sm'>{experience.location}</div>
                   </div>
                 </div>
-                <div className='md:flex hidden md:flex-start'>{experience.date}</div>
+                <div className='md:flex hidden text-sm md:flex-start'>{experience.date}</div>
               </div>
               <div className="flex items-center gap-16 justify-between">
                 <div className="mt-2 flex text-sm lg:text-base flex-center text-start">
