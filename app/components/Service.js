@@ -80,7 +80,7 @@ const Services = () => {
                             <li>{service.activityThree}</li>
                             {/* <li>Compliance reviews</li> */}
                         </ul>
-                        <button class="bg-[#122455] mt-4 lg:mt-6 hover:bg-blue-700 text-gray-300 font-bold py-2 px-4 rounded">
+                        <button  onClick={() => window.location.href = '#contact'} class="bg-[#122455] mt-4 lg:mt-6 hover:bg-blue-700 text-gray-300 font-bold py-2 px-4 rounded">
                          Let&apos;s talk
                         </button>
                     </div>
