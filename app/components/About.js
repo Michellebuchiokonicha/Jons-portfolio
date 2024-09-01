@@ -98,7 +98,7 @@ const About = () => {
   });
 
   const [text2] = useTypewriter({
-    words: ['Ayodeji'],
+    words: ['Ayodele'],
     loop: 0,
     typeSpeed: 150,
     deleteSpeed: 150,
