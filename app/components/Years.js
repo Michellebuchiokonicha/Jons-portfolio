@@ -40,7 +40,7 @@ const Years = () => {
         animate={controls}
         ref={ref}
       >
-        <h1 className="leading-10 py-1">Clients</h1>
+        <h1 className="leading-10 py-1"> Participants Trained</h1>
         <motion.div
           className="font-bold md:font-extrabold text-3xl md:text-4xl lg:text-6xl"
           variants={numberVariants}
@@ -48,7 +48,8 @@ const Years = () => {
           animate={controls}
           ref={ref}
         >
-          256+
+          500+
+
         </motion.div>
       </motion.div>
       <motion.div
@@ -58,7 +59,7 @@ const Years = () => {
         animate={controls}
         ref={ref}
       >
-        <h1 className="leading-10 py-1">Experience</h1>
+        <h1 className="leading-10 py-1">Certifications</h1>
         <motion.div
           className="font-bold md:font-extrabold text-3xl md:text-4xl lg:text-6xl"
           variants={numberVariants}
@@ -66,7 +67,7 @@ const Years = () => {
           animate={controls}
           ref={ref}
         >
-          4 Years
+          7+
         </motion.div>
       </motion.div>
       <motion.div
@@ -76,7 +77,7 @@ const Years = () => {
         animate={controls}
         ref={ref}
       >
-        <h1 className="leading-10 py-1">Happy Clients</h1>
+        <h1 className="leading-10 py-1">Community Impact</h1>
         <motion.div
           className="font-bold md:font-extrabold text-3xl md:text-4xl lg:text-6xl"
           variants={numberVariants}
@@ -84,7 +85,7 @@ const Years = () => {
           animate={controls}
           ref={ref}
         >
-          100%
+          3000
         </motion.div>
       </motion.div>
       <motion.div
@@ -94,7 +95,7 @@ const Years = () => {
         animate={controls}
         ref={ref}
       >
-        <h1 className="leading-10 py-1">Impact</h1>
+        <h1 className="leading-10 py-1">Online Reach</h1>
         <motion.div
           className="font-bold md:font-extrabold text-3xl md:text-4xl lg:text-6xl"
           variants={numberVariants}
@@ -102,7 +103,7 @@ const Years = () => {
           animate={controls}
           ref={ref}
         >
-          10K
+        2 Million+
         </motion.div>
       </motion.div>
     </div>

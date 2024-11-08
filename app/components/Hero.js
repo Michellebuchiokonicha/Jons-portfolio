@@ -50,7 +50,7 @@ const  Hero = () => {
               animate={controls}
               ref={ref}
             >
-              Cybersecurity Analyst, Cyber Educator & Cloud Architect.
+              Cybersecurity Architect  & Educator | Digital Literacy Advocate 
             </motion.div>
             <motion.div
               className=' text-sm sm:text-base'
@@ -59,7 +59,9 @@ const  Hero = () => {
               animate={controls}
               ref={ref}
             >
-              Cloud security and safety | Cloud Consultancy| | Cyber Innovation and Education
+              
+Helping businesses Stay Cyber Resilient | Shaping a Safer Digital World through Cyber Education | Empowering Next Generation of CyberFutures 
+
             </motion.div>
           </div>
           <motion.div

@@ -14,7 +14,7 @@ function classNames(...classes) {
 }
 
 const Navbar = () => {
-  const [activeNav, setActiveNav] = useState('services'); // 'services' is initially active
+  const [activeNav, setActiveNav] = useState('services'); 
 
   const scrollToSection = (id) => {
     const section = document.getElementById(id);

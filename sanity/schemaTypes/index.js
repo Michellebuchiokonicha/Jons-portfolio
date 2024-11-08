@@ -5,6 +5,6 @@ import { serviceType } from './serviceType'
 import { testimonialType } from './testimonialType'
 import { aboutType } from './aboutType'
 
-export const schema = {
-  types: [ contactType, experienceType, serviceType, testimonialType, aboutType],
-}
+// export const schema = {
+//   types: [ contactType, experienceType, serviceType, testimonialType, aboutType],
+// }
