@@ -46,7 +46,7 @@ function Calendar() {
       {/* Calendly PopupModal */}
       {isOpen && (
         <PopupModal
-          url="https://calendly.com/michelleokonicha/30min"
+          url="https://calendly.com/jonathanayodele/30min"
           rootElement={document.body}
           open={isOpen}
           onModalClose={handleCloseModal}

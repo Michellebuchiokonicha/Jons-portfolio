@@ -65,7 +65,7 @@ const About = () => {
       </motion.div>
       <div className="m-auto flex flex-col lg:flex-row gap-y-10 text-center lg:gap-x-1 items-center justify-center text-white w-full">
         <motion.div
-          className=' font-normal text-4xl md:text-7xl lg:text-8xl w-full lg:w-1/3 lg:pl-16'
+          className=' font-normal text-lg md:text-xl lg:text-4xl w-full lg:w-1/3 lg:pl-16'
           variants={nameVariants}
           initial="hidden"
           animate={controls}
@@ -86,7 +86,7 @@ const About = () => {
           />
         </div>
         <motion.div
-          className='font-normal text-4xl md:text-7xl lg:text-8xl w-full lg:w-1/3'
+          className='font-normal text-lg md:text-xl lg:text-4xl w-full lg:w-1/3'
           variants={nameVariants}
           initial="hidden"
           animate={controls}
@@ -96,26 +96,40 @@ const About = () => {
           <Cursor cursorColor='#8B0000' />
         </motion.div>
       </div>
-      <div className='px-0 md:px-32 flex flex-col md:flex-row items-center gap-y-10 md:gap-y-0 gap-x-0 md:gap-x-96 justify-between mt-10 w-full'>
+      <div className='px-0 md:px-2 flex flex-col md:flex-row items-center gap-y-8 md:gap-y-0 gap-x-0 md:gap-x-80 justify-between mt-10 w-full'>
         <motion.div
-          className='text-lg md:text-2xl w-full md:w-[35%] text-center md:text-left'
+          className='text-sm md:text-base leading-8 w-full md:w-1/3 text-center md:text-left'
           variants={textVariants}
           initial="hidden"
           animate={controls}
           ref={ref}
         >
-          <motion.span className='font-normal'>Welcome </motion.span>
-          <motion.span className='font-normal'> to my corner of the Internet</motion.span>
+          <motion.span className='font-sm'>Welcome  to my corner of the Internet </motion.span>
+          <motion.span className='font-sm'>Jonathan is a Cybersecurity Professional passionate about using technology 
+            for social good. With extensive experience in IT security and consulting safeguarding organizational assets and 
+            optimizing technology resources for enhanced productivity and growth. Having worked as a Cybersecurity Engineer, 
+            Cybersecurity Analyst, and information security officer Skilled in cybersecurity risk assessment, Network security, 
+            endpoint detection and response,
+            monitoring and investigation etc. I hold certifications such as ISO 27001 Lead Implementer, Security+, CCNA, CompTIA A+. </motion.span>
         </motion.div>
         <motion.div
-          className='w-full md:w-[35%] text-lg md:text-2xl text-center md:text-left'
+          className='w-full md:w-1/3 text-sm md:text-base leading-8 text-center md:text-left'
           variants={textVariants}
           initial="hidden"
           animate={controls}
           ref={ref}
         >
-          <motion.span className='font-normal'>with over 7 years of impact ..</motion.span>
-          <motion.span className='font-normal'>Social media</motion.span>
+          <motion.span className='font-sm'>I hold a Master&apos;s in 
+            Cybersecurity and have a background in leading cybersecurity initiatives for diverse clients. 
+            He is a member of the Cyber Security Experts Association of Nigeria, the British Computer Society, 
+            ISC2, ISACA and the Chartered Institute of Information Security, London. I am passionate about 
+            creating economic advancement opportunities for young ones leveraging technology and also an advocate of a
+             diverse and inclusive tech ecosystem and volunteers as a UK STEM Ambassador and CyberFirst Ambassador, an initiative of the 
+            National Cyber Security Centre (NCSC), an arm of the GCHQ, promoting diversity in tech and inspiring the 
+            next generation of tech talents.</motion.span>
+          <motion.div className='font-normal'>
+            wsss
+          </motion.div>
         </motion.div>
       </div>
     </section>

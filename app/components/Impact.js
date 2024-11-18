@@ -53,7 +53,7 @@ const Impact = () => {
         animate={controls}
         ref={ref}
       >
-        <h1 className="leading-10 pb-1">Clients</h1>
+        <h1 className="leading-10 pb-1">Mentees</h1>
         <motion.div
           className="font-bold md:font-extrabold text-3xl md:text-4xl lg:text-6xl"
           variants={numberVariants}
@@ -61,7 +61,7 @@ const Impact = () => {
           animate={controls}
           ref={ref}
         >
-          256+
+          25+
         </motion.div>
       </motion.div>
       <motion.div
@@ -71,7 +71,7 @@ const Impact = () => {
         animate={controls}
         ref={ref}
       >
-        <h1 className="leading-10 pb-1">Impact</h1>
+        <h1 className="leading-10 pb-1">Skill</h1>
         <motion.div
           className="font-bold md:font-extrabold text-3xl md:text-4xl lg:text-6xl"
           variants={numberVariants}
@@ -79,7 +79,7 @@ const Impact = () => {
           animate={controls}
           ref={ref}
         >
-          10K
+          97%
         </motion.div>
       </motion.div>
     </div>

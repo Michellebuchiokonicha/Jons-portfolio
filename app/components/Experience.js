@@ -30,12 +30,12 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
-      role: 'Cyber Educator',
+      role: 'Information Security Officer',
       logo: '',
       date: 'feb.2022 - March.2023',
-      location: 'Lagos, Nigeri',
+      location: 'United Kingdom',
       description:
-        'Detailsfff fjdknen erbrfdjfddf dfbfdbfdn dhsjdsjd dcccdssdddsf hfdhfdhfdj sdbhvjsdbh ghsdhgfbdh dhgvh sdfh sdhgdsfh sadgdsg sgsdghsd sdghds dwsjds ekrtkj erkreker ejrre about experience 1',
+        '',
     },
     {
       id: 2,
