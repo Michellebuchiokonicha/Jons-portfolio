@@ -105,7 +105,7 @@ const Experience = () => {
         animate={controls}
       >
         <div className="font-bold text-2xl lg:text-4xl">My Experiences</div>
-        <div>My Experiences span across industries</div>
+        <div>My Experiences spans across industries</div>
       </motion.div>
       <motion.div
         className="mx-auto relative w-4/5 min-h-screen items-center"

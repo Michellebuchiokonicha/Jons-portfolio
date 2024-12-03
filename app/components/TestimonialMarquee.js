@@ -9,7 +9,7 @@ const TestimonialMarquee = ({ testimonials }) => {
     <div className="min-h-screen flex flex-col items-center w-full overflow-hidden relative transition-all duration-500">
       <div className="flex animate-marquee space-x-8">
         {[...testimonials, ...testimonials].map((testimonial, index) => (
-           <div key={index} className="md:max-w-[45%] max-w-[25%] flex-shrink-0 px-4">
+           <div key={index} className="md:w-[20%] max-w-[15%] h-screen flex-shrink-0 px-4">
            <div className="flex flex-col md:flex-row items-center gap-y-8 gap:x-16 lg:gap-x-24 p-6 bg-white shadow-xl rounded-lg">
              <div className="hidden lg:flex flex-1 bg-[#122455] rounded-lg justify-center items-center m-auto">
                <Image
@@ -32,7 +32,7 @@ const TestimonialMarquee = ({ testimonials }) => {
         ))}
         {/* Duplicate again to ensure smoothness */}
         {[...testimonials].map((testimonial, index) => (
-          <div key={index} className="md:max-w-[45%] max-w-[25%] flex-shrink-0 px-4">
+          <div key={index} className="md:w-[20%] max-w-[15%] h-screen flex-shrink-0 px-4">
           <div className="flex flex-col md:flex-row items-center gap-y-8 gap-x-16 lg:gap-x-24 p-6 bg-white shadow-xl rounded-lg">
             <div className="hidden lg:flex flex-1 bg-[#122455] rounded-lg justify-center items-center m-auto">
               <Image

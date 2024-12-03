@@ -104,8 +104,8 @@ const About = () => {
           animate={controls}
           ref={ref}
         >
-          <motion.span className='font-sm'>Welcome  to my corner of the Internet </motion.span>
-          <motion.span className='font-sm'>Jonathan is a Cybersecurity Professional passionate about using technology 
+          <motion.div className='font-sm leading-loose text-xl font-bold md:mb-4'>Welcome  to my corner of the Internet </motion.div>
+          <motion.span className='font-normal leading-loose'>Jonathan is a Cybersecurity Professional passionate about using technology 
             for social good. With extensive experience in IT security and consulting safeguarding organizational assets and 
             optimizing technology resources for enhanced productivity and growth. Having worked as a Cybersecurity Engineer, 
             Cybersecurity Analyst, and information security officer Skilled in cybersecurity risk assessment, Network security, 
@@ -119,7 +119,7 @@ const About = () => {
           animate={controls}
           ref={ref}
         >
-          <motion.span className='font-sm'>I hold a Master&apos;s in 
+          <motion.span className='font-normal leading-loose'>I hold a Master&apos;s in 
             Cybersecurity and have a background in leading cybersecurity initiatives for diverse clients. 
             He is a member of the Cyber Security Experts Association of Nigeria, the British Computer Society, 
             ISC2, ISACA and the Chartered Institute of Information Security, London. I am passionate about 
