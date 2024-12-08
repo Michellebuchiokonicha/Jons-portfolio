@@ -1,20 +1,38 @@
-import { useState } from 'react'
-import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { useState, useEffect } from 'react';
+import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { useRouter } from 'next/navigation';
 
 const navigationItems = [
+  { id: '', name: 'JACA' },
   { id: 'services', name: 'Services' },
   { id: 'about', name: 'About' },
   { id: 'experience', name: 'Experience' },
+  { id: 'awards', name: 'Awards', isPage: true },
+  { id: 'speaking', name: 'Speaking', isPage: true },
   { id: 'contact', name: 'Contact Me' },
-]
+];
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(' ');
 }
 
 const Navbar = () => {
-  const [activeNav, setActiveNav] = useState('services'); 
+  const [activeNav, setActiveNav] = useState('services');
+  const router = useRouter();
+
+  useEffect(() => {
+    if (router?.pathname) {
+      // const path = router.pathname;
+      const path = router.pathname.split('/')[1] || '';
+      const activeItem = navigationItems.find((item) =>
+        item.isPage ? path === item.id : path === ''
+      );
+      if (activeItem) {
+        setActiveNav(activeItem.id);
+      }
+    }
+  }, [router?.pathname]);
 
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
@@ -23,9 +41,20 @@ const Navbar = () => {
     }
   };
 
-  const handleNavClick = (id) => {
+  const handleNavClick = (e, id, isPage) => {
+    e.preventDefault();
     setActiveNav(id);
-    scrollToSection(id);
+    if (isPage) {
+      router.push(`/${id}`);
+    } else {
+      if (router?.pathname === '/') {
+       
+        scrollToSection(id);
+      } else {
+    
+        router.push(`/#${id}`);
+      }
+    }
   };
 
   return (
@@ -39,33 +68,51 @@ const Navbar = () => {
               <XMarkIcon aria-hidden="true" className="hidden h-6 w-6 group-data-[open]:block" />
             </DisclosureButton>
           </div>
-          <div className="absolute inset-y-0 cursor-pointer right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              <div className="text-[#122455]">
-                JACA
-              </div>
-          </div> 
+          {/* <div className="absolute inset-y-0 cursor-pointer right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+            <div className="text-[#122455]" >JACA</div>
+          </div> */}
           <div className="flex text-center items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="hidden sm:ml-6 sm:block">
+            {/* <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 {navigationItems.map((item) => (
                   <a
                     key={item.id}
-                    href={`#${item.id}`}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleNavClick(item.id);
-                    }}
+                    href={item.isPage ? `/${item.id}` : `#${item.id}`}
+                    onClick={(e) => handleNavClick(e, item.id, item.isPage)}
                     aria-current={activeNav === item.id ? 'page' : undefined}
                     className={classNames(
-                      activeNav === item.id ? 'bg-[#122455] text-gray-300' : 'text-[#122455] hover:bg-[#122455] hover:text-white',
-                      'rounded-md px-3 py-2 text-sm font-medium',
+                      activeNav === item.id || activeNav ===item.isPage ? 'bg-[#122455] text-gray-300'
+                      // : activeNav === item.isPage ? 'bg-[#122455] text-gray-300'
+                      : 'text-[#122455] hover:bg-[#122455] hover:text-white',
+                      'rounded-md px-3 py-2 text-sm font-medium'
                     )}
                   >
                     {item.name}
                   </a>
                 ))}
               </div>
-            </div>
+            </div> */}
+            <div className="hidden sm:ml-6 sm:block">
+  <div className="flex space-x-4">
+  {navigationItems.map((item) => (
+                <a
+                  key={item.id}
+                  href={item.isPage ? `/${item.id}` : `#${item.id}`}
+                  onClick={(e) => handleNavClick(e, item.id, item.isPage)}
+                  aria-current={activeNav === item.id ? 'page' : undefined}
+                  className={classNames(
+                    activeNav === item.id
+                      ? 'bg-[#122455] text-gray-300'
+                      : 'text-[#122455] hover:bg-[#122455] hover:text-white',
+                    'rounded-md px-3 py-2 text-sm font-medium'
+                  )}
+                >
+        {item.name}
+      </a>
+    ))}
+  </div>
+</div>
+
           </div>
         </div>
       </div>
@@ -76,15 +123,13 @@ const Navbar = () => {
             <DisclosureButton
               key={item.id}
               as="a"
-              href={`#${item.id}`}
-              onClick={(e) => {
-                e.preventDefault();
-                handleNavClick(item.id);
-              }}
-              aria-current={activeNav === item.id ? 'page' : undefined}
+              href={item.isPage ? `/${item.id}` : `#${item.id}`}
+              onClick={(e) => handleNavClick(e, item.id, item.isPage)}
               className={classNames(
-                activeNav === item.id ? 'bg-[#122455] text-white' : 'text-[#122455] hover:bg-[#122455] hover:text-white',
-                'block rounded-md px-3 py-2 text-base font-medium',
+                activeNav === item.id
+                  ? 'bg-[#122455] text-white'
+                  : 'text-[#122455] hover:bg-[#122455] hover:text-white',
+                'block rounded-md px-3 py-2 text-base font-medium'
               )}
             >
               {item.name}
@@ -93,7 +138,7 @@ const Navbar = () => {
         </div>
       </DisclosurePanel>
     </Disclosure>
-  )
-}
+  );
+};
 
 export default Navbar;

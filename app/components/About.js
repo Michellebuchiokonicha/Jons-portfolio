@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
 import { useState, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
- import { useTypewriter, Cursor } from 'react-simple-typewriter';
+import { useTypewriter, Cursor } from 'react-simple-typewriter';
 
 const About = () => {
   const textVariants = {
@@ -33,21 +33,20 @@ const About = () => {
   }, [controls, inView]);
 
   const [text] = useTypewriter({
-    words: ['Transforming Communities through Tech' ,],
+    words: ['Transforming Communities through Tech'],
     loop: 0,
     typeSpeed: 100,
     deleteSpeed: 100,
     onLoopDone: () => console.log(`loop completed after infinite runs.`)
-  })
+  });
+  
   const [text2] = useTypewriter({
-    words: ['Creating Opportunities in Cybersecurity.' ,],
+    words: ['Creating Opportunities in Cybersecurity.'],
     loop: 0,
     typeSpeed: 150,
-    //  delay: 200,
     deleteSpeed: 150,
     onLoopDone: () => console.log(`loop completed after infinite runs.`)
-  })
-
+  });
 
   return (
     <section id='about' className='snap-start m-auto px-8 mb-5 text-white min-h-screen flex flex-col items-center justify-center'>
@@ -58,9 +57,6 @@ const About = () => {
         animate={controls}
         ref={ref}
       >
-        {/* <motion.span className='font-normal'> */}
-            {/* Abou /t Me */}
-            {/* </motion.span> */}
         <motion.span className='font-normal'> About Me</motion.span>
       </motion.div>
       <div className="m-auto flex flex-col lg:flex-row gap-y-10 text-center lg:gap-x-1 items-center justify-center text-white w-full">
@@ -127,8 +123,14 @@ const About = () => {
              diverse and inclusive tech ecosystem and volunteers as a UK STEM Ambassador and CyberFirst Ambassador, an initiative of the 
             National Cyber Security Centre (NCSC), an arm of the GCHQ, promoting diversity in tech and inspiring the 
             next generation of tech talents.</motion.span>
-          <motion.div className='font-normal'>
-            wsss
+          <motion.div className='py-4 font-normal'>
+            <a
+              href='/Jonathan Ayodele NG CVvv.pdf' // Ensure your CV file is placed in the public folder
+              download='Jonathan_CV.pdf' // The name the file will be saved as
+              className="bg-[#8B0000] mt-4 lg:mt-6 hover:bg-blue-700 text-gray-300 font-bold py-2 px-4 rounded"
+            >
+              Download my CV
+            </a>
           </motion.div>
         </motion.div>
       </div>
