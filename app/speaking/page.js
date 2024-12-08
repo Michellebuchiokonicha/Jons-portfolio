@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import award from '../../public/awards8.jpg'
-import J1 from '../../public/awards1.webp';
+import J1 from '../../public/awards8.jpg';
 import Navbar from '../components/Navbar';
 import NewsletterSignup from '../components/NewsLeter';
 
@@ -53,7 +53,7 @@ const Speaking = () => {
     <div className=" bg-[#050E28] font-montserrat min-h-screen flex flex-col items-center justify-center mx-auto my-2 lg:my-2 lg:px-16 lg:my-22 p-8">
 
     {/* Hero Image Section */}
-    <div className="w-full h-96 relative rounded-lg overflow-hidden shadow-xl">
+    <div className="w-full  bg-gradient-to-l from-[#263a70] to-[#122455] h-96 relative rounded-lg overflow-hidden shadow-xl">
       <Image
         src={J1}
         alt="Hero Image"

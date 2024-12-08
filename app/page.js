@@ -16,6 +16,7 @@ import Impact from "./components/Impact";
 import styled from 'styled-components';
 import { useRef } from "react";
 import NewsletterSignup from "./components/NewsLeter";
+import Features from "./components/features";
 // import { Zen_Dots } from "next/font/google";
 // import MyBlog from "./components/MyBlog";
 
@@ -45,6 +46,7 @@ export default function Home() {
     <Services />
     <Professionals />
     <Impact />
+    <Features />
     <Contact />
     <Calendar />
     <NewsletterSignup />
