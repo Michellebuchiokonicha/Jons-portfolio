@@ -158,7 +158,7 @@ const Awards = () => {
   
 
   return (
-    <div id='#awards'>
+    <div id='awards'>
       <Navbar />
        <div id='jaca' className=' text-gray-100 min-h-screen flex  items-center justify-center'>
                  <div className='bg-gradient-to-l bg-[#122455] align-center lg:pl-32 rounded-xl m-auto pt-0 px-10 lg:gap-10 min-h-[30rem] h-full flex w-[90%] lg:w-4/5 flex-col lg:flex-row items-center justify-center'>
@@ -172,7 +172,7 @@ const Awards = () => {
                          animate={controls}
                          ref={ref}
                        >
-                        I am honored to have received recognition for my contributions to the fields of cybersecurity and digital 
+                        I am honored to have received recognition for my contributions to the fields of cybersecurity and digital
                         literacy. My commitment to empowering individuals and businesses has led to several
                          awards and nominations, reflecting my impact on the community and industry. Notable accolades include:
            
@@ -188,7 +188,7 @@ const Awards = () => {
                     ref={ref}
                   >
                     Awards & Media
-                  </motion.div> 
+                  </motion.div>
                      <motion.img
                        src='jonathan-speak.jpeg'
                        alt='my profile picture'
@@ -268,10 +268,8 @@ const Awards = () => {
         </motion.div>
       </div>
 
-     {/* Media Mentions Section */}
 
     <div className=" mt-24 md:p-24 py-12 mb-16 bg-[#122455] rounded-xl shadow-xl">
-      {/* Animated Header */}
       <motion.h2
         className="text-center text-2xl sm:text-3xl font-bold text-[#F7F7F7] mb-8"
         variants={headerVariants}
@@ -281,7 +279,6 @@ const Awards = () => {
         Media Mentions
       </motion.h2>
 
-      {/* Animated Paragraph */}
       <motion.p
         className="text-[#F7F7F7] text-base sm:text-lg w-3/4 text-center m-auto mb-8"
         variants={paragraphVariants}
@@ -291,7 +288,6 @@ const Awards = () => {
         I have been featured in several media outlets, sharing my insights on cybersecurity and community empowerment. Here&apos;s a selection of articles where my work has been highlighted.
       </motion.p>
 
-      {/* Animated Media Mentions */}
       <motion.div
         className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-8"
         variants={containerVariants}

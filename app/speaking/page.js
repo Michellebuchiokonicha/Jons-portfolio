@@ -108,27 +108,18 @@ const Speaking = () => {
   
 
   return (
-    <div>
+    <div id='speaking'>
      <Navbar />
-     {/* <h2 className="text-3xl text-center font-bold text-gray-100"> Speaking Engagemnts</h2> */}
 
       <div id='jaca' className=' text-gray-100 min-h-screen flex  items-center justify-center'>
            <div className='bg-gradient-to-l bg-[#122455] align-center lg:pl-32 rounded-xl m-auto pt-0 px-10 lg:gap-10 min-h-[30rem] h-full flex w-[90%] lg:w-4/5 flex-col lg:flex-row items-center justify-center'>
              <div className='lg:w-1/2  w-full lg:mb-0 text-center items-center lg:text-left'>
                <div className='w-full mt-16 lg:mt-0 md:mt-8 sm:w-[30rem] leading-6 lg:mb-4 mx-auto lg:mx-0'>
-               {/* <motion.div
-              className='text-2xl md:text-4xl lg:pb-6 leading-loose'
-              variants={textVariants}
-              initial="hidden"
-              animate={controls}
-              ref={ref}
-            >
-              Speaking Engagements
-            </motion.div> */}
+              
                  <motion.div
                    className=' text-sm sm:text-base '
                    variants={textVariants}
-                   initial="hidden"
+                   initial=""
                    animate={controls}
                    ref={ref}
                  >
@@ -145,7 +136,7 @@ const Speaking = () => {
                  </motion.div>
                </div>
              </div>
-             <div className='lg:w-1/2 items-center justify-center hidden lg:block m-auto pb-32  w-full lg:mb-0 text-center lg:text-left'>
+             <div className='lg:w-1/2 pt-12 md:pt-0 items-center justify-center lg:block m-auto pb-32  w-full lg:mb-0 text-center lg:text-left'>
               <motion.div
                                  className='text-2xl text-center md:text-4xl lg:p-8 leading-loose'
                                  variants={textVariants}
@@ -170,7 +161,7 @@ const Speaking = () => {
     <div className=" bg-[#050E28] font-montserrat min-h-screen flex flex-col items-center justify-center mx-auto my-2 lg:my-2 lg:px-16 lg:my-22 p-8">
 
 
-      {/* Introduction Section */}
+      {/* Introduction  */}
       <motion.div
         className="text-center mb-16"
         initial={{ opacity: 0, y: -20 }}
@@ -178,7 +169,7 @@ const Speaking = () => {
         transition={{ duration: 1 }}
       >
       </motion.div>
-       {/* Areas of Expertise Section */}
+       {/* Areas of Expertise  */}
        <motion.div
           className="mb-16 text-center"
           initial={{ opacity: 0, y: -20 }}
