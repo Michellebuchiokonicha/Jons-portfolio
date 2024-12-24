@@ -57,7 +57,7 @@ const About = () => {
         animate={controls}
         ref={ref}
       >
-        <motion.span className='font-normal'> About Me</motion.span>
+        <motion.span className='font-normal'> Bio</motion.span>
       </motion.div>
       <div className="m-auto flex flex-col lg:flex-row gap-y-10 text-center lg:gap-x-1 items-center justify-center text-white w-full">
         <motion.div
@@ -72,12 +72,14 @@ const About = () => {
         </motion.div>
         <div className='w-1/3 flex items-center justify-center'>
           <motion.img
-            src='J-3.jpeg'
+            src='J-black.PNG'
             alt='my profile picture'
             className='rounded-full'
             variants={imageVariants}
             initial="hidden"
             animate={controls}
+            width={200}
+            height={200}
             ref={ref}
           />
         </div>

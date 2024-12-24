@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { FaLinkedin, FaTwitter, FaInstagram, FaYoutube, FaFacebook } from "react-icons/fa";
+import { FaLinkedin, FaTwitter, FaInstagram, FaYoutube, } from "react-icons/fa";
 
 const NewsletterSignup = () => {
   return (
@@ -33,10 +33,10 @@ const NewsletterSignup = () => {
             <FaInstagram className="text-xl" />
           </a>
           <a
-            href="https://web.facebook.com/jonat.ayo/?_rdc=1&_rdr#" target="_blank"
+            href="https://www.youtube.com/@jonathanayodele" target="_blank"
             className="text-[#122455] bg-white p-3 rounded-full shadow-md hover:scale-110 transition-transform"
           >
-            <FaFacebook className="text-xl" />
+            <FaYoutube className="text-xl" />
           </a>
         </div>
         {/* Subscription Prompt */}
@@ -60,10 +60,8 @@ const NewsletterSignup = () => {
       </div>
       {/* Footer Section */}
       <div className="mt-8 text-center text-gray-400">
-        <p>Address:</p>
-        <p>2, Ikorodu Road, Ikorodu,Lagos, Nigeria</p>
         <p>Email: jonaayodele@gmail.com</p>
-        <p>Phone: +234 8168042270</p>
+        <p>From my babygirl, Michelle Onyebuchi Okonicha</p>
         <p className="mt-4">&copy; Jonathan Ayodele - All rights reserved.</p>
       </div>
     </section>

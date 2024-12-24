@@ -1,11 +1,13 @@
 "use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import award from '../../public/awards8.jpg'
 import J1 from '../../public/awards8.jpg';
 import Navbar from '../components/Navbar';
+import styled from 'styled-components';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import NewsletterSignup from '../components/NewsLeter';
 
 
@@ -35,6 +37,38 @@ const previousEngagements = [
     imageSrc: '/awards8.jpg',
   },
 ];
+const areasOfExpertise = [
+  {
+    id: 1,
+    expertise: 'Cybersecurity and Innovation',
+    imageSrc: '/cybersecurity.jpg',
+  },
+  {
+    id: 2,
+    expertise:  'Digital Literacy Advocacy',
+    imageSrc: '/digital-literacy.jpg',
+  },
+  {
+    id: 3,
+    expertise: 'Youth Empowerment through Technology',
+    imageSrc: '/youth.jpeg',
+  },
+  {
+    id: 4,
+    expertise: 'Risk Management and Cyber Resilience',
+    imageSrc: '/cyber-resilience.png',
+  },
+  {
+    id: 5,
+    expertise: 'Building Inclusive Technology Environments',
+    imageSrc: '/inclusion.jpg',
+  },
+  {
+    id: 6,
+    expertise: 'Business Innovation and SME Development',
+    imageSrc: '/sme.webp',
+  },
+];
 
 const Speaking = () => {
   const containerVariants = {
@@ -46,25 +80,95 @@ const Speaking = () => {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
+   const controls = useAnimation();
+    const [ref, inView] = useInView();
+  
+    useEffect(() => {
+      if (inView) {
+        controls.start("visible");
+      } else {
+        controls.start("hidden");
+      }
+    }, [controls, inView]);
+  
+    const textVariants = {
+      hidden: { opacity: 0, y: 50 },
+      visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.2 } },
+    };
+  
+    const imageVariants = {
+      hidden: { opacity: 0, scale: 0.5 },
+      visible: { opacity: 1, scale: 1, transition: { duration: 0.8, delay: 0.6 } },
+    };
+  
+    const buttonVariants = {
+      hidden: { opacity: 0, y: 50 },
+      visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.8 } },
+    };
+  
 
   return (
     <div>
      <Navbar />
+     {/* <h2 className="text-3xl text-center font-bold text-gray-100"> Speaking Engagemnts</h2> */}
+
+      <div id='jaca' className=' text-gray-100 min-h-screen flex  items-center justify-center'>
+           <div className='bg-gradient-to-l bg-[#122455] align-center lg:pl-32 rounded-xl m-auto pt-0 px-10 lg:gap-10 min-h-[30rem] h-full flex w-[90%] lg:w-4/5 flex-col lg:flex-row items-center justify-center'>
+             <div className='lg:w-1/2  w-full lg:mb-0 text-center items-center lg:text-left'>
+               <div className='w-full mt-16 lg:mt-0 md:mt-8 sm:w-[30rem] leading-6 lg:mb-4 mx-auto lg:mx-0'>
+               {/* <motion.div
+              className='text-2xl md:text-4xl lg:pb-6 leading-loose'
+              variants={textVariants}
+              initial="hidden"
+              animate={controls}
+              ref={ref}
+            >
+              Speaking Engagements
+            </motion.div> */}
+                 <motion.div
+                   className=' text-sm sm:text-base '
+                   variants={textVariants}
+                   initial="hidden"
+                   animate={controls}
+                   ref={ref}
+                 >
+                  As a seasoned cybersecurity professional and digital literacy advocate, Jonathan has shared his insights on 
+                  some of the industry’s most pressing issues at conferences, webinars, and international forums. Specializing 
+                  in Cybersecurity, Digital Literacy, and Youth Empowerment, His key areas include cybersecurity innovation, 
+                  risk management, and the intersection of technology and socio-economic development, Career advancement. As 
+                  an advocate for cybersecurity and digital skills, Jonathan is passionate about raising awareness on cyber 
+                  resilience, and safe digital practices in an increasingly connected world. With interests in business 
+                  innovation, startups, and SME development, Jonathan brings a unique blend of technical expertise and 
+                  entrepreneurial insight to his sessions. Audiences leave his sessions equipped with actionable knowledge to 
+                  navigate today’s digital landscape with confidence, security, and a growth mindset.
+     
+                 </motion.div>
+               </div>
+             </div>
+             <div className='lg:w-1/2 items-center justify-center hidden lg:block m-auto pb-32  w-full lg:mb-0 text-center lg:text-left'>
+              <motion.div
+                                 className='text-2xl text-center md:text-4xl lg:p-8 leading-loose'
+                                 variants={textVariants}
+                                 initial="hidden"
+                                 animate={controls}
+                                 ref={ref}
+                               >
+                                 Speaking Engagements
+                               </motion.div>
+               <motion.img
+                 src='jonathan-speak.jpeg'
+                 alt='my profile picture'
+                 className=' shadow-[#122455]'
+                 variants={imageVariants}
+                 // initial="hidden"
+                 // animate={controls}
+                 ref={ref}
+               />
+             </div>
+           </div>
+         </div>
     <div className=" bg-[#050E28] font-montserrat min-h-screen flex flex-col items-center justify-center mx-auto my-2 lg:my-2 lg:px-16 lg:my-22 p-8">
 
-    {/* Hero Image Section */}
-    <div className="w-full  bg-gradient-to-l from-[#263a70] to-[#122455] h-96 relative rounded-lg overflow-hidden shadow-xl">
-      <Image
-        src={J1}
-        alt="Hero Image"
-        className="object-cover w-full h-full"
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#122455] to-transparent flex items-center justify-center">
-        <h1 className="md:text-5xl text-3xl font-bold text-gray-100 leading-tight text-center px-4 py-2 bg-black bg-opacity-10 rounded-lg">
-            Speaking Engagements
-        </h1>
-      </div>
-    </div>
 
       {/* Introduction Section */}
       <motion.div
@@ -73,23 +177,43 @@ const Speaking = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <div className="flex justify-center mb-8">
-          <Image
-            src="/images/jonathan-profile.jpg"
-            alt="Jonathan's Profile"
-            className="rounded-full w-32 h-32 object-cover"
-            width={128}
-            height={128}
-          />
-        </div>
-        <p className="text-gray-100 text-lg leading-loose text-center m-auto">
-          As a seasoned cybersecurity professional and digital literacy advocate, Jonathan has shared his insights on some of the industry’s most pressing issues at conferences, webinars, and international forums. Specializing in Cybersecurity, Digital Literacy, and Youth Empowerment, his key areas include cybersecurity innovation, risk management, and the intersection of technology and socio-economic development. Jonathan is passionate about raising awareness on cyber resilience, and safe digital practices in an increasingly connected world. With interests in business innovation, startups, and SME development, he brings a unique blend of technical expertise and entrepreneurial insight to his sessions. Audiences leave his sessions equipped with actionable knowledge to navigate today’s digital landscape with confidence, security, and a growth mindset.
-        </p>
       </motion.div>
+       {/* Areas of Expertise Section */}
+       <motion.div
+          className="mb-16 text-center"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <h2 className="text-3xl font-bold text-gray-100 mb-12">Topics I can Speak on</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {areasOfExpertise.map((expertise, index) => (
+              <div key={index} className="flex text-center flex-col flex-wrap items-center py-4 justify-center bg-transparent from-[#141e3a] to-[#122455] border border-gray-400 text-white rounded-xl shadow-lg">
+                <div className="my-4">
+              <Image
+                src={expertise.imageSrc}
+                alt={expertise.expertise}
+                className="rounded-3xl"
+                width={150}
+                height={150}
+              />
+            </div>
+                <div className='w-2/3 text-lg font-semibold'>{expertise.expertise}</div>
+              </div>
+            ))}
+          </div>
+        </motion.div>
 
       {/* Previous Speaking Engagements Section */}
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="mb-16 text-center"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <h2 className="text-3xl font-bold text-gray-100 mt-12">Previous Speaking Engagemnts</h2>
+      <motion.div
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-12"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -97,14 +221,14 @@ const Speaking = () => {
         {previousEngagements.map((engagement) => (
           <motion.div
             key={engagement.id}
-            className=" bg-gradient-to-l from-[#141e3a] to-[#122455] text-white p-8 rounded-lg shadow-lg hover:scale-105 transition-all duration-300"
+            className=" bg-gradient-to-l from-[#141e3a] to-[#122455] text-white p-8 rounded-xl shadow-lg hover:scale-105 transition-all duration-300"
             variants={itemVariants}
           >
             <div className="mb-4">
               <Image
-                src={engagement.imageSrc} // Dynamic image for each event
+                src={engagement.imageSrc}
                 alt={engagement.event}
-                className="rounded-lg w-full h-48 object-cover"
+                className="rounded-xl w-full h-48 object-cover"
                 width={350}
                 height={200}
               />
@@ -116,19 +240,27 @@ const Speaking = () => {
           </motion.div>
         ))}
       </motion.div>
+        </motion.div>
 
       {/* Booking Section */}
+      <div className='p-12 py-16 pb-20'>
       <div className="text-center mt-24 p-16 mb-16 bg-gradient-to-l from-white to-[#90a1d5] rounded-xl shadow-xl">
-        <h2 className="text-3xl font-bold text-[#122455] mb-8">Book Me for Your Event</h2>
+        <h2 className="text-3xl font-bold text-[#122455] mb-8">Contact Me for Bookings</h2>
         <p className="text-[#122455] text-lg mb-8">
           Interested in having Jonathan speak at your next event? Whether it’s a conference, summit, or corporate seminar, Jonathan’s talks provide actionable insights and thought leadership in the fields of cybersecurity, digital literacy, and youth empowerment. Reach out today to discuss your event!
         </p>
-        <a
-          href="/#contact"
-          className="bg-[#8B0000] text-white py-3 px-8 rounded-lg text-lg font-semibold hover:bg-[#f20034] transition duration-300"
-        >
-          Contact Me for Booking
-        </a>
+        {/* <a href="mailto:michelleokonicha@gmail.com?subject=Book%20Now&cc=michelleokonicha@gmail.com&bcc=michelleokonicha@gmail.com&body=hello%20mimi"
+   className="bg-[#8B0000] text-white py-3 px-8 rounded-xl text-lg font-semibold hover:bg-[#f20034] transition duration-300">
+    Contact Me for Booking
+</a> */}
+<a href='https://forms.gle/QHDy8TakMrqbmzLS6'
+   className="bg-[#8B0000] text-white py-3 px-8 rounded-xl text-lg font-semibold hover:bg-[#f20034] transition duration-300" target='_blank'>Book now</a>
+
+        {/* <a href='mailto:michelleokonicha@gmail.com?subject=Book Now&cc=support@company.com&bcc=support@gmail.com&body=hello mimi'
+                  className="bg-[#8B0000] text-white py-3 px-8 rounded-xl text-lg font-semibold hover:bg-[#f20034] transition duration-300"
+
+        >book now</a> */}
+      </div>
       </div>
 
     </div>

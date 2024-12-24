@@ -41,12 +41,12 @@ export default function Home() {
     <Navbar />
     <Hero />
     <About  />
+    <Features />
     <Years />
     <Experience />
     <Services />
     <Professionals />
     <Impact />
-    <Features />
     <Contact />
     <Calendar />
     <NewsletterSignup />

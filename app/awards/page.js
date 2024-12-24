@@ -1,12 +1,14 @@
 "use client";
 
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
 import Modal from "../components/Modal";
 import Image from 'next/image';
 import J1 from '../../public/awards8.jpg';
 import Navbar from '../components/Navbar';
 import NewsletterSignup from '../components/NewsLeter';
+import styled from 'styled-components';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 
 const awards = [
@@ -128,38 +130,103 @@ const Awards = () => {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
+   const controls = useAnimation();
+    const [ref, inView] = useInView();
+  
+    useEffect(() => {
+      if (inView) {
+        controls.start("visible");
+      } else {
+        controls.start("hidden");
+      }
+    }, [controls, inView]);
+  
+    const textVariants = {
+      hidden: { opacity: 0, y: 50 },
+      visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.2 } },
+    };
+  
+    const imageVariants = {
+      hidden: { opacity: 0, scale: 0.5 },
+      visible: { opacity: 1, scale: 1, transition: { duration: 0.8, delay: 0.6 } },
+    };
+  
+    const buttonVariants = {
+      hidden: { opacity: 0, y: 50 },
+      visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.8 } },
+    };
+  
 
   return (
-    <div>
+    <div id='#awards'>
       <Navbar />
+       <div id='jaca' className=' text-gray-100 min-h-screen flex  items-center justify-center'>
+                 <div className='bg-gradient-to-l bg-[#122455] align-center lg:pl-32 rounded-xl m-auto pt-0 px-10 lg:gap-10 min-h-[30rem] h-full flex w-[90%] lg:w-4/5 flex-col lg:flex-row items-center justify-center'>
+                   <div className='lg:w-1/2  w-full lg:mb-0 text-center items-center lg:text-left'>
+                 
+                     <div className='w-full mt-16 lg:mt-0 md:mt-8 sm:w-[30rem] leading-6 lg:mb-4 mx-auto lg:mx-0'>
+                     {/* <motion.div
+                    className='text-2xl md:text-4xl lg:pb-6 leading-loose'
+                    variants={textVariants}
+                    initial="hidden"
+                    animate={controls}
+                    ref={ref}
+                  >
+                    Speaking Engagements
+                  </motion.div> */}
+                       <motion.div
+                         className=' text-sm sm:text-base '
+                         variants={textVariants}
+                         initial="hidden"
+                         animate={controls}
+                         ref={ref}
+                       >
+                        As a seasoned cybersecurity professional and digital literacy advocate, Jonathan has shared his insights on 
+                        some of the industry’s most pressing issues at conferences, webinars, and international forums. Specializing 
+                        in Cybersecurity, Digital Literacy, and Youth Empowerment, His key areas include cybersecurity innovation, 
+                        risk management, and the intersection of technology and socio-economic development, Career advancement. As 
+                        an advocate for cybersecurity and digital skills, Jonathan is passionate about raising awareness on cyber 
+                        resilience, and safe digital practices in an increasingly connected world. With interests in business 
+                        innovation, startups, and SME development, Jonathan brings a unique blend of technical expertise and 
+                        entrepreneurial insight to his sessions. Audiences leave his sessions equipped with actionable knowledge to 
+                        navigate today’s digital landscape with confidence, security, and a growth mindset.
+           
+                       </motion.div>
+                     </div>
+                     {/* <motion.div
+                       variants={buttonVariants}
+                       initial="hidden"
+                       animate={controls}
+                       ref={ref}
+                     >
+                       <button  onClick={() => window.location.href = '#contact'} class="bg-[#5D5F70] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 sm:mt-0">
+                         Let&apos;s talk
+                       </button>
+                     </motion.div> */}
+                   </div>
+                   <div className='lg:w-1/2 items-center justify-center hidden lg:block m-auto pb-32  w-full lg:mb-0 text-center lg:text-left'>
+                     <motion.div
+                    className='text-2xl text-center md:text-4xl lg:p-8 leading-loose'
+                    variants={textVariants}
+                    initial="hidden"
+                    animate={controls}
+                    ref={ref}
+                  >
+                    Awards & Media
+                  </motion.div> 
+                     <motion.img
+                       src='jonathan-speak.jpeg'
+                       alt='my profile picture'
+                       className=' shadow-[#122455]'
+                       variants={imageVariants}
+                       // initial="hidden"
+                       // animate={controls}
+                       ref={ref}
+                     />
+                   </div>
+                 </div>
+               </div>
       <div className=" bg-[#050E28] font-montserrat min-h-screen flex flex-col items-center justify-center mx-auto my-2 lg:px-16 lg:my-22 p-8">
-
-    {/* Hero Image Section */}
-    <div className="w-full h-96 relative mb-16 rounded-lg overflow-hidden shadow-xl">
-      <Image
-        src={J1}
-        alt="Hero Image"
-        className="object-cover w-full h-full"
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#122455] to-transparent flex items-center justify-center">
-        <h1 className="md:text-5xl text-3xl font-bold text-gray-300 leading-tight text-center px-4 py-2 bg-black bg-opacity-10 rounded-lg">
-          My Achievements & Recognitions
-        </h1>
-      </div>
-    </div>
-
-      {/* Introduction Section */}
-      <motion.div
-        className="text-center mb-16"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        <p className="text-gray-300 text-lg w-3/4 text-center m-auto mb-8">
-          Over the years, I have been honored with several awards and nominations, recognizing my dedication to cybersecurity, digital literacy, and community empowerment. Below, you can explore my notable awards, certifications, and media mentions:
-        </p>
-      </motion.div>
-
       {/* Awards Section */}
       <motion.div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -178,25 +245,44 @@ const Awards = () => {
           //   <p className="text-lg mb-4">{award.date}</p>
           //   <p className="text-base">{award.description}</p>
           // </motion.div>
-          <motion.div
-          key={award.id}
-          className="bg-[#122455] text-white p-8 rounded-lg shadow-lg hover:scale-105 transition-all duration-300"
-          variants={itemVariants}
-        >
-          <div className="mb-4">
-            {/* <Image
-              src={award.imageSrc} 
-              alt={award.title}
-              className="rounded-lg w-full h-48 object-cover"
-              width={350}
-              height={200}
-            /> */}
-          </div>
-          <h3 className="text-2xl font-semibold mb-2">{award.title}</h3>
-          <p className="text-lg mb-2">{award.date}</p>
-          <p className="text-base mb-4">{award.description}</p>
-          {/* <p className="text-base font-semibold">{award.topics}</p> */}
-        </motion.div>
+           <motion.div
+                      key={award.id}
+                      className=" bg-gradient-to-l from-[#141e3a] to-[#122455] text-white p-8 rounded-xl shadow-lg hover:scale-105 transition-all duration-300"
+                      variants={itemVariants}
+                    >
+                      <div className="mb-4">
+                        <Image
+                          src={award.imageSrc}
+                          alt={award.title}
+                          className="rounded-xl w-full h-48 object-cover"
+                          width={350}
+                          height={200}
+                        />
+                      </div>
+                      <h3 className="text-2xl font-semibold mb-2">{award.title}</h3>
+                      <p className="text-lg mb-2">{award.date}</p>
+                      <p className="text-base mb-4">{award.description}</p>
+                      <p className="text-base font-semibold">{award.topics}</p>
+                    </motion.div>
+        //   <motion.div
+        //   key={award.id}
+        //   className="bg-[#122455] text-white p-8 rounded-lg shadow-lg hover:scale-105 transition-all duration-300"
+        //   variants={itemVariants}
+        // >
+        //   <div className="mb-4">
+        //     {/* <Image
+        //       src={award.imageSrc} 
+        //       alt={award.title}
+        //       className="rounded-lg w-full h-48 object-cover"
+        //       width={350}
+        //       height={200}
+        //     /> */}
+        //   </div>
+        //   <h3 className="text-2xl font-semibold mb-2">{award.title}</h3>
+        //   <p className="text-lg mb-2">{award.date}</p>
+        //   <p className="text-base mb-4">{award.description}</p>
+        //   {/* <p className="text-base font-semibold">{award.topics}</p> */}
+        // </motion.div>
 
         ))}
       </motion.div>
