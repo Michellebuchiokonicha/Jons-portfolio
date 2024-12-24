@@ -270,7 +270,7 @@ const Awards = () => {
 
      {/* Media Mentions Section */}
 
-    <div className=" mt-24 md:p-24 pt-12 pb-12 md:pb-2 md:pt-0 mb-16 bg-[#122455] rounded-xl shadow-xl">
+    <div className=" mt-24 md:p-24 py-12 mb-16 bg-[#122455] rounded-xl shadow-xl">
       {/* Animated Header */}
       <motion.h2
         className="text-center text-2xl sm:text-3xl font-bold text-[#F7F7F7] mb-8"
