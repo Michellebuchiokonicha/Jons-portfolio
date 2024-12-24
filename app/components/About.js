@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
+import Image from 'next/image';
 
 const About = () => {
   const textVariants = {
@@ -57,9 +58,9 @@ const About = () => {
         animate={controls}
         ref={ref}
       >
-        <motion.span className='font-normal'> Bio</motion.span>
+        <motion.span className='font-normal hidden md:block'> Bio</motion.span>
       </motion.div>
-      <div className="m-auto flex flex-col lg:flex-row gap-y-10 text-center lg:gap-x-1 items-center justify-center text-white w-full">
+      <div className="m-auto hidden md:flex flex-col lg:flex-row gap-y-10 text-center lg:gap-x-1 items-center justify-center text-white w-full">
         <motion.div
           className=' font-normal text-lg md:text-xl lg:text-4xl w-full lg:w-1/3 lg:pl-16'
           variants={nameVariants}
@@ -94,6 +95,31 @@ const About = () => {
           <Cursor cursorColor='#8B0000' />
         </motion.div>
       </div>
+      {/* mobile starts */}
+      <div className="m-auto py-12 flex md:hidden flex-col lg:flex-row gap-y-10 text-center lg:gap-x-1 items-center justify-center text-white w-full">
+        <div className='font-semibold text-xl'>Bio</div>
+       <div>
+          {text}
+          <Cursor cursorColor='#8B0000' />
+        </div>
+        <div className='w-1/3 flex items-center justify-center'>
+         <Image
+            src='/J-black.PNG'
+            alt='my profile picture'
+            className='rounded-full'
+            
+            width={200}
+            height={200}
+          />
+        </div>
+        <div
+          className='font-normal text-lg md:text-xl lg:text-4xl w-full lg:w-1/3'
+        >
+          {text2}
+          <Cursor cursorColor='#8B0000' />
+        </div>
+      </div>
+      {/* mobile ends */}
       <div className='px-0 md:px-2 flex flex-col md:flex-row items-center gap-y-8 md:gap-y-0 gap-x-0 md:gap-x-80 justify-between mt-10 w-full'>
         <motion.div
           className='text-sm md:text-base leading-8 w-full md:w-1/3 text-center md:text-left'
@@ -117,18 +143,18 @@ const About = () => {
           animate={controls}
           ref={ref}
         >
-          <motion.span className='font-normal leading-loose'>I hold a Master&apos;s in 
-            Cybersecurity and have a background in leading cybersecurity initiatives for diverse clients. 
-            He is a member of the Cyber Security Experts Association of Nigeria, the British Computer Society, 
-            ISC2, ISACA and the Chartered Institute of Information Security, London. I am passionate about 
+          <motion.span className='font-normal leading-loose'>I hold a Master&apos;s in
+            Cybersecurity and have a background in leading cybersecurity initiatives for diverse clients.
+            He is a member of the Cyber Security Experts Association of Nigeria, the British Computer Society,
+            ISC2, ISACA and the Chartered Institute of Information Security, London. I am passionate about
             creating economic advancement opportunities for young ones leveraging technology and also an advocate of a
              diverse and inclusive tech ecosystem and volunteers as a UK STEM Ambassador and CyberFirst Ambassador, an initiative of the 
-            National Cyber Security Centre (NCSC), an arm of the GCHQ, promoting diversity in tech and inspiring the 
+            National Cyber Security Centre (NCSC), an arm of the GCHQ, promoting diversity in tech and inspiring the
             next generation of tech talents.</motion.span>
           <motion.div className='py-4 font-normal'>
             <a
-              href='/Jonathan Ayodele NG CVvv.pdf' // Ensure your CV file is placed in the public folder
-              download='Jonathan_CV.pdf' // The name the file will be saved as
+              href='/Jonathan Ayodele NG CVvv.pdf'
+              download='Jonathan_CV.pdf'
               className="bg-[#8B0000] mt-4 lg:mt-6 hover:bg-blue-700 text-gray-300 font-bold py-2 px-4 rounded"
             >
               Download my CV

@@ -24,17 +24,17 @@ const awards = [
     id: 2,
     title: 'UK Cyber Diversity Awards (2024)',
     date: 'April 2024',
-    imageSrc: '/awards8.jpg',
+    imageSrc: '/diversityaward.png',
     description:
-      'Recognized as "Highly Commended" for efforts in promoting diversity and inclusion within the cybersecurity sector.',
+      'Recognized as "Highly Commended" for efforts in promoting diversity and inclusion within the UK sector.',
   },
   {
     id: 3,
     title: 'One to Watch - UK Real Cyber Awards (2024)',
     date: 'November 2024',
-    imageSrc: '/awards8.jpg',
+    imageSrc: '/onetowatch.png',
     description:
-      'Nominated for this prestigious award, highlighting emerging leaders in cybersecurity.',
+      'Nominated for and won this prestigious award, highlighting emerging leaders in cybersecurity.',
   },
 ];
 
@@ -165,46 +165,21 @@ const Awards = () => {
                    <div className='lg:w-1/2  w-full lg:mb-0 text-center items-center lg:text-left'>
                  
                      <div className='w-full mt-16 lg:mt-0 md:mt-8 sm:w-[30rem] leading-6 lg:mb-4 mx-auto lg:mx-0'>
-                     {/* <motion.div
-                    className='text-2xl md:text-4xl lg:pb-6 leading-loose'
-                    variants={textVariants}
-                    initial="hidden"
-                    animate={controls}
-                    ref={ref}
-                  >
-                    Speaking Engagements
-                  </motion.div> */}
                        <motion.div
                          className=' text-sm sm:text-base '
                          variants={textVariants}
-                         initial="hidden"
+                         initial=""
                          animate={controls}
                          ref={ref}
                        >
-                        As a seasoned cybersecurity professional and digital literacy advocate, Jonathan has shared his insights on 
-                        some of the industry’s most pressing issues at conferences, webinars, and international forums. Specializing 
-                        in Cybersecurity, Digital Literacy, and Youth Empowerment, His key areas include cybersecurity innovation, 
-                        risk management, and the intersection of technology and socio-economic development, Career advancement. As 
-                        an advocate for cybersecurity and digital skills, Jonathan is passionate about raising awareness on cyber 
-                        resilience, and safe digital practices in an increasingly connected world. With interests in business 
-                        innovation, startups, and SME development, Jonathan brings a unique blend of technical expertise and 
-                        entrepreneurial insight to his sessions. Audiences leave his sessions equipped with actionable knowledge to 
-                        navigate today’s digital landscape with confidence, security, and a growth mindset.
+                        I am honored to have received recognition for my contributions to the fields of cybersecurity and digital 
+                        literacy. My commitment to empowering individuals and businesses has led to several
+                         awards and nominations, reflecting my impact on the community and industry. Notable accolades include:
            
                        </motion.div>
                      </div>
-                     {/* <motion.div
-                       variants={buttonVariants}
-                       initial="hidden"
-                       animate={controls}
-                       ref={ref}
-                     >
-                       <button  onClick={() => window.location.href = '#contact'} class="bg-[#5D5F70] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 sm:mt-0">
-                         Let&apos;s talk
-                       </button>
-                     </motion.div> */}
                    </div>
-                   <div className='lg:w-1/2 items-center justify-center hidden lg:block m-auto pb-32  w-full lg:mb-0 text-center lg:text-left'>
+                   <div className='lg:w-1/2 pt-12 md:pt-0 items-center justify-center lg:block m-auto pb-32  w-full lg:mb-0 text-center lg:text-left'>
                      <motion.div
                     className='text-2xl text-center md:text-4xl lg:p-8 leading-loose'
                     variants={textVariants}
@@ -235,16 +210,6 @@ const Awards = () => {
         animate="visible"
       >
         {awards.map((award) => (
-          // <motion.div
-          //   key={award.id}
-          //   className="bg-[#122455] text-white rounded-lg shadow-lg p-8 hover:scale-105 transition-all duration-300 ease-in-out transform"
-          //   variants={itemVariants}
-          //   onClick={() => setSelectedAward(award)}
-          // >
-          //   <h2 className="text-2xl font-semibold mb-2">{award.title}</h2>
-          //   <p className="text-lg mb-4">{award.date}</p>
-          //   <p className="text-base">{award.description}</p>
-          // </motion.div>
            <motion.div
                       key={award.id}
                       className=" bg-gradient-to-l from-[#141e3a] to-[#122455] text-white p-8 rounded-xl shadow-lg hover:scale-105 transition-all duration-300"
@@ -264,25 +229,6 @@ const Awards = () => {
                       <p className="text-base mb-4">{award.description}</p>
                       <p className="text-base font-semibold">{award.topics}</p>
                     </motion.div>
-        //   <motion.div
-        //   key={award.id}
-        //   className="bg-[#122455] text-white p-8 rounded-lg shadow-lg hover:scale-105 transition-all duration-300"
-        //   variants={itemVariants}
-        // >
-        //   <div className="mb-4">
-        //     {/* <Image
-        //       src={award.imageSrc} 
-        //       alt={award.title}
-        //       className="rounded-lg w-full h-48 object-cover"
-        //       width={350}
-        //       height={200}
-        //     /> */}
-        //   </div>
-        //   <h3 className="text-2xl font-semibold mb-2">{award.title}</h3>
-        //   <p className="text-lg mb-2">{award.date}</p>
-        //   <p className="text-base mb-4">{award.description}</p>
-        //   {/* <p className="text-base font-semibold">{award.topics}</p> */}
-        // </motion.div>
 
         ))}
       </motion.div>
@@ -290,7 +236,7 @@ const Awards = () => {
       {/* Modal for Award Details */}
       {selectedAward && (
         <Modal onClose={() => setSelectedAward(null)}>
-          <div className="p-6 bg-white text-black rounded-lg">
+          <div className="p-6 bg-white text-black rounded-xl">
             <h2 className="text-xl font-bold mb-2">{selectedAward.title}</h2>
             <p className="text-sm text-gray-600 mb-4">{selectedAward.date}</p>
             <p className="text-base">{selectedAward.description}</p>
@@ -301,7 +247,7 @@ const Awards = () => {
       {/* Certifications Section */}
       <div className="text-center mt-24 p-16 mb-16 bg-gradient-to-l bg-white rounded-xl shadow-xl">
         <h2 className="text-3xl font-bold text-[#122455] mb-8">Certifications</h2>
-        <p className="text-[#122455] text-lg w-3/4 text-center m-auto mb-8">
+        <p className="text-[#122455] text-lg w-full md:w-3/4 text-center m-auto mb-8">
           These certifications are a testament to my commitment to continuous learning and staying ahead in cybersecurity and technology.
         </p>
         <motion.div
@@ -313,10 +259,10 @@ const Awards = () => {
           {certifications.map((cert, index) => (
             <motion.div
               key={index}
-              className="bg-[#122455] text-[#F7F7F7] py-6 p-8 rounded-lg shadow-md hover:bg-[#283b92] transition duration-300"
+              className="bg-[#122455] text-[#F7F7F7] py-6 p-4 sm:p-8 rounded-xl shadow-md hover:bg-[#283b92] transition duration-300"
               variants={itemVariants}
             >
-              <h3 className="text-xl font-semibold">{cert}</h3>
+              <h3 className="text-lg font-normal sm:text-xl md:font-semibold">{cert}</h3>
             </motion.div>
           ))}
         </motion.div>
@@ -324,10 +270,10 @@ const Awards = () => {
 
      {/* Media Mentions Section */}
 
-<div className=" mt-24 p-24 mb-16 bg-[#122455] rounded-xl shadow-xl">
+    <div className=" mt-24 md:p-24 pt-12 pb-12 md:pb-2 md:pt-0 mb-16 bg-[#122455] rounded-xl shadow-xl">
       {/* Animated Header */}
       <motion.h2
-        className="text-center text-3xl font-bold text-[#F7F7F7] mb-8"
+        className="text-center text-2xl sm:text-3xl font-bold text-[#F7F7F7] mb-8"
         variants={headerVariants}
         initial="hidden"
         animate="visible"
@@ -337,7 +283,7 @@ const Awards = () => {
 
       {/* Animated Paragraph */}
       <motion.p
-        className="text-[#F7F7F7] text-lg w-3/4 text-center m-auto mb-8"
+        className="text-[#F7F7F7] text-base sm:text-lg w-3/4 text-center m-auto mb-8"
         variants={paragraphVariants}
         initial="hidden"
         animate="visible"
@@ -355,16 +301,16 @@ const Awards = () => {
         {mediaMentions.map((mention, index) => (
           <motion.div
             key={index}
-            className="bg-[#F7F7F7]  w-3/4 m-auto text-[#122455] p-8 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out"
+            className="bg-[#F7F7F7]  w-3/4 m-auto text-[#122455] p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out"
             variants={itemVariants}
             whileHover={{ scale: 1.05, boxShadow: '0px 10px 30px rgba(0, 0, 0, 0.3)' }}
             whileTap={{ scale: 0.95 }}
           >
-            <h3 className="text-2xl font-semibold">{mention.title}</h3>
+            <h3 className="text-lg font-semibold pb-4 sm:text-2xl sm:font-semibold">{mention.title}</h3>
             <p className="text-[#122455] text-sm mb-4">{mention.description}</p>
             <a href={mention.link} target="_blank" rel="noopener noreferrer">
               <motion.button
-                className="bg-[#8B0000] mt-4 lg:mt-6 hover:bg-blue-700 text-gray-300 font-bold py-2 px-4 rounded"
+                className="bg-[#8B0000] mt-4 lg:mt-6 hover:bg-blue-700 text-gray-300 font-bold py-2 px-4 rounded-xl"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >

@@ -78,9 +78,9 @@ const Contact = () => {
   };
 
   return (
-    <div id='contact' className="max-w-lg text-gray-300  min-h-screen mx-auto px-4 items-center justify-center flex flex-col" ref={ref}>
+    <div id='contact' className="max-w-lg text-gray-300  min-h-screen mx-auto px-8 sm:px-4 items-center justify-center flex flex-col" ref={ref}>
       <motion.h1
-        className="font-bold text-4xl mb-10"
+        className="font-semibold sm:font-bold text-2xl sm:text-4xl mb-10"
         variants={textVariants}
         initial="hidden"
         animate={controls}
@@ -89,7 +89,7 @@ const Contact = () => {
       </motion.h1>
 
       {submissionSuccess && (
-        <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 mb-16 rounded relative" role="alert">
+        <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 mb-16 rounded-xl relative" role="alert">
           <strong className="font-bold">Success!</strong> Your message has been sent.
         </div>
       )}

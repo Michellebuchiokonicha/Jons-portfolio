@@ -47,26 +47,6 @@ const Professionals = () => {
       <TestimonialMarquee testimonials={testimonials} />
     </div>
   );
-  // return (
-  //   <div className="pt-72 min-h-screen flex flex-col items-center">
-  //     <h1 className="text-4xl font-bold mb-32 text-white">Testimonials</h1>
-  //     <div className="w-full flex flex-wrap justify-center gap-8">
-  //       {testimonials.map((testimonial, index) => (
-  //         <div
-  //           key={index}
-  //           className="bg-white p-6 rounded-lg shadow-lg max-w-md flex flex-col items-center text-center"
-  //         >
-  //           <FaQuoteLeft className="text-gray-400 text-3xl mb-4" />
-  //           <p className="text-gray-700 italic mb-4">{testimonial.text}</p>
-  //           <h3 className="font-bold text-gray-800">{testimonial.name}</h3>
-  //           {testimonial.role && (
-  //             <p className="text-gray-600 text-sm">{testimonial.role}</p>
-  //           )}
-  //         </div>
-  //       ))}
-  //     </div>
-  //   </div>
-  // );
 };
 
 export default Professionals;

@@ -6,7 +6,7 @@ import JACA from '../../public/jaca-logo.png';
 import Image from 'next/image';
 
 const navigationItems = [
-  { id: 'services', name: 'Services', link: "/#service" },
+  { id: 'services', name: 'Services', link: "/#services" },
   { id: 'about', name: 'About', link: "/#about" },
   { id: 'experience', name: 'Experience', link: "/#experience" },
   { id: 'awards', name: 'Awards & Media', link: "/awards" },

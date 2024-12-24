@@ -69,7 +69,7 @@ const  Hero = () => {
             animate={controls}
             ref={ref}
           >
-            <button  onClick={() => window.location.href = '#contact'} class="bg-[#5D5F70] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 sm:mt-0">
+            <button  onClick={() => window.location.href = '#contact'} class="bg-[#5D5F70] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl mt-4 sm:mt-0">
               Let&apos;s talk
             </button>
           </motion.div>

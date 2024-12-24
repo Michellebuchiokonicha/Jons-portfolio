@@ -6,7 +6,7 @@ import { FaLinkedin, FaTwitter, FaInstagram, FaYoutube, } from "react-icons/fa";
 const NewsletterSignup = () => {
   return (
     <section className="bg-gradient-to-b from-[#050E28] to-[#0f0f1a] py-16 px-6">
-      <div className="max-w-4xl mx-auto text-center rounded-lg bg-[#122455] shadow-lg py-12 px-8">
+      <div className="max-w-4xl mx-auto text-center rounded-xl bg-[#122455] shadow-lg py-12 px-8">
         {/* Header Section */}
         <h2 className="text-lg font-semibold text-gray-300 tracking-wider uppercase mb-4">
           Let’s Stay Connected
