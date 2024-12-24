@@ -166,7 +166,7 @@ const Experience = () => {
                 </div>
                 <div>
                   <div className='text-end'>{experience.date}</div>
-                  <div className='text-end font-semibold'>{experience.location}</div>
+                  {/* <div className='text-end font-semibold'>{experience.location}</div> */}
                   </div>
               </div>
               <div className="mt-2 text-sm lg:text-base text-gray-600">

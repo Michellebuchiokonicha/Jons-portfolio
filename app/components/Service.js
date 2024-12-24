@@ -37,7 +37,7 @@ const Services = () => {
         <section id="services" className="my-22 flex flex-col lg:flex-row items-center justify-center min-h-screen px-4 lg:px-16 transition-all duration-500">
             <div className="flex flex-col lg:flex-row items-center justify-around gap-y-2 lg:gap-x-6 lg:gap-y-0 space-y-8 lg:space-y-0 transition-all duration-500 order-2" ref={servicesContainerRef}>
             <div className={`lg:w-[40%] w-[90%] text-gray-300 lg:mb-[43rem] ${isFixed ? 'lg:fixed lg:bottom-0 lg:top-4 lg:rigt-0 lg:left-2 lg:ml-32': ''}`} ref={fixedContentRef}>
-                 <h2 className="text-3xl justify-center items-center text-center md:text-4xl lg:text-6xl mb-4 lg:mb-5">Some Things I Can Help You With</h2>
+                 <h2 className="text-2xl justify-center items-center text-center md:text-3xl lg:text-5xl mb-4 lg:mb-5">Some Things I Can Help You With</h2>
                  <div className='text-sm lg:text-base text-center'>
                  I help create and implement tailored cybersecurity strategies that enhance resilience. 
                  Some others include training programs that equip teams with essential skills to combat 
