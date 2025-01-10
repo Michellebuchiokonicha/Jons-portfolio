@@ -36,7 +36,7 @@ const Professionals = () => {
     {
       image: FaQuoteLeft,
       text: "Jonathan helped me prepare for the chevening scholarship and continuously share other opportunities with me. His attention to details allows him give critical and important feedback on all his reviews.",
-      name: "Buchi Michelle Okonicha",
+      name: "BMO",
       role: "Software Engineer & Google Developer Expert",
     },
   ];

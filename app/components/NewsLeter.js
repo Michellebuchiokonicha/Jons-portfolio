@@ -61,7 +61,6 @@ const NewsletterSignup = () => {
       {/* Footer Section */}
       <div className="mt-8 text-center text-gray-400">
         <p>Email: jonaayodele@gmail.com</p>
-        <p>From my babygirl, Michelle Onyebuchi Okonicha</p>
         <p className="mt-4">&copy; Jonathan Ayodele - All rights reserved.</p>
       </div>
     </section>

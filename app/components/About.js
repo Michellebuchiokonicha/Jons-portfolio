@@ -58,7 +58,7 @@ const About = () => {
         animate={controls}
         ref={ref}
       >
-        <motion.span className='font-normal hidden md:block'> Bio</motion.span>
+        <motion.span className='font-normal hidden md:block pt-4'>#whoami</motion.span>
       </motion.div>
       <div className="m-auto hidden md:flex flex-col lg:flex-row gap-y-10 text-center lg:gap-x-1 items-center justify-center text-white w-full">
         <motion.div
@@ -97,7 +97,7 @@ const About = () => {
       </div>
       {/* mobile starts */}
       <div className="m-auto py-12 flex md:hidden flex-col lg:flex-row gap-y-10 text-center lg:gap-x-1 items-center justify-center text-white w-full">
-        <div className='font-semibold text-xl'>Bio</div>
+        <div className='font-semibold text-xl'>#whoami</div>
        <div>
           {text}
           <Cursor cursorColor='#8B0000' />
@@ -154,7 +154,7 @@ const About = () => {
           <motion.div className='py-4 font-normal'>
             <a
               href='/Jonathan Ayodele NG CVvv.pdf'
-              download='Jonathan_CV.pdf'
+              download='https://drive.google.com/drive/folders/1quWhSClM_-IVDspYz6vQMkDvIgAXwReR?usp=drive_link'
               className="bg-[#8B0000] mt-4 lg:mt-6 hover:bg-blue-700 text-gray-300 font-bold py-2 px-4 rounded"
             >
               Download my CV
