@@ -11,14 +11,10 @@ import Contact from "./components/Contact";
 import Years from "./components/Years";
 import Calendar from "./components/Calendar";
 import Impact from "./components/Impact";
-
-
 import styled from 'styled-components';
 import { useRef } from "react";
 import NewsletterSignup from "./components/NewsLeter";
 import Features from "./components/features";
-// import { Zen_Dots } from "next/font/google";
-// import MyBlog from "./components/MyBlog";
 
 
 const DivGrey = styled.div`

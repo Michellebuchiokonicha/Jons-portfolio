@@ -6,7 +6,6 @@ const Services = () => {
 
     const services = [
         {id: 1, title: 'Cybersecurity Growth', description: 'I can help you leverage your existing Cybersecurity experiences to apply for and take advantage Global Opportunities like scholarships, study abroad etc', activity1:'CV reviews, writing and Revamp', activity2: 'Linkedin Optimization', activity3: 'Cover Letter', activity4: 'Job Search Strategy', activity5:'Study abroad & Scholarships Coaching'},
-        // {id: 1, title: ' IT Consulting', description: 'Tailored services that help businesses navigate their digital transformation journeys, ensuring robust security and operational efficiency.', activity1:'Vulnerability Assessment.', activity2: 'Strategic planning for IT infrastructure and cloud adoption.', activity3: 'Ongoing support and advisory'},
         {id: 2, title: 'Trainings', description: 'Engaging training programs designed to enhance cybersecurity awareness and digital skills for teams and individuals at all levels.', activity1:'Customized workshops.', activity2: 'Hands-on trainings.', activity3: 'Continuous learning and development.'},
         {id: 3, title: 'Deployment', description: 'Expert deployment services to implement cutting-edge cybersecurity solutions that protect your organization’s data and infrastructure.', activity1:'Integration of security tools that fit business needs.', activity2: 'Configuration and optimization.', activity3: 'Compliance'},
 
@@ -60,7 +59,6 @@ const Services = () => {
                             <li>{service.activity3}</li>
                             {service.activity4 && (<li>{service?.activity4}</li>)}
                             {service.activity5 && (<li>{service?.activity4}</li>)}
-                            {/* <li>Compliance reviews</li> */}
                         </ul>
                         <button  onClick={() => window.location.href = '#contact'} class="bg-[#122455] mt-4 lg:mt-6 hover:bg-blue-700 text-gray-300 font-bold py-2 px-4 rounded">
                          Let&apos;s talk

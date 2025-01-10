@@ -80,8 +80,6 @@ const  Hero = () => {
             alt='my profile picture'
             className='rounded-full shadow-[#122455]'
             variants={imageVariants}
-            // initial="hidden"
-            // animate={controls}
             ref={ref}
           />
         </div>

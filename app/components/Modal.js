@@ -12,7 +12,7 @@ const Modal = ({ children, onClose }) => {
       return () => {
         document.removeEventListener("keydown", handleKeyDown);
       };
-    }, [onClose]); // Add `onClose` as a dependency to ensure it works with updates
+    }, [onClose]);
   
     const handleOutsideClick = (event) => {
       if (event.target.classList.contains("modal-overlay")) {

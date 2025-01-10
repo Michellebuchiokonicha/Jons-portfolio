@@ -2,10 +2,7 @@
 
 import React, { useEffect } from 'react';
 import Image from 'next/image';
-import award from '../../public/awards8.jpg'
-import J1 from '../../public/awards8.jpg';
 import Navbar from '../components/Navbar';
-import styled from 'styled-components';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import NewsletterSignup from '../components/NewsLeter';
@@ -151,8 +148,6 @@ const Speaking = () => {
                  alt='my profile picture'
                  className=' shadow-[#122455]'
                  variants={imageVariants}
-                 // initial="hidden"
-                 // animate={controls}
                  ref={ref}
                />
              </div>
@@ -161,7 +156,6 @@ const Speaking = () => {
     <div className=" bg-[#050E28] font-montserrat min-h-screen flex flex-col items-center justify-center mx-auto my-2 lg:my-2 lg:px-16 lg:my-22 p-8">
 
 
-      {/* Introduction  */}
       <motion.div
         className="text-center mb-16"
         initial={{ opacity: 0, y: -20 }}
@@ -240,17 +234,8 @@ const Speaking = () => {
         <p className="text-[#122455] text-lg mb-8">
           Interested in having Jonathan speak at your next event? Whether it’s a conference, summit, or corporate seminar, Jonathan’s talks provide actionable insights and thought leadership in the fields of cybersecurity, digital literacy, and youth empowerment. Reach out today to discuss your event!
         </p>
-        {/* <a href="mailto:michelleokonicha@gmail.com?subject=Book%20Now&cc=michelleokonicha@gmail.com&bcc=michelleokonicha@gmail.com&body=hello%20mimi"
-   className="bg-[#8B0000] text-white py-3 px-8 rounded-xl text-lg font-semibold hover:bg-[#f20034] transition duration-300">
-    Contact Me for Booking
-</a> */}
 <a href='https://forms.gle/QHDy8TakMrqbmzLS6'
    className="bg-[#8B0000] text-white py-3 px-8 rounded-xl text-lg font-semibold hover:bg-[#f20034] transition duration-300" target='_blank'>Book now</a>
-
-        {/* <a href='mailto:michelleokonicha@gmail.com?subject=Book Now&cc=support@company.com&bcc=support@gmail.com&body=hello mimi'
-                  className="bg-[#8B0000] text-white py-3 px-8 rounded-xl text-lg font-semibold hover:bg-[#f20034] transition duration-300"
-
-        >book now</a> */}
       </div>
       </div>
 
